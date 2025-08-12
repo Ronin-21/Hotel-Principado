@@ -1,0 +1,27 @@
+@import "tailwindcss";
+@import "tailwindcss-animated";
+@import "tailwindcss-intersect";
+@import "slick-carousel/slick/slick-theme.css";
+@import "slick-carousel/slick/slick.css";
+
+@theme {
+  --color-primary: #c5953a;
+  --color-secondary: #c5503a;
+  --color-tertiary: #953ac5;
+  --color-light: #f5f5f5;
+  --color-dark: #2e2e2e;
+  --font-primary: Poppins, sans-serif;
+  --font-title: Restora, serif;
+}
+
+#root {
+  min-height: 100dvh;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  font-family: var(--font-primary);
+}
