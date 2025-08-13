@@ -1,5 +1,6 @@
 "use client";
 
+import PagesHero from "@/components/PagesHero";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -19,36 +20,36 @@ const tabs: Tab[] = [
 
 const images: Record<TabKey, string[]> = {
   habitaciones: [
-    "/room-1.webp",
-    "/room-2.webp",
-    "/room-3.webp",
-    "/room-4.webp",
-    "/room-5.webp",
-    "/room-6.webp",
+    "/default-image.jpg",
+    "/default-image.jpg",
+    "/default-image.jpg",
+    "/default-image.jpg",
+    "/default-image.jpg",
+    "/default-image.jpg",
   ],
   restaurante: [
-    "/dinner-1.webp",
-    "/dinner-2.webp",
-    "/dinner-3.webp",
-    "/dinner-4.webp",
-    "/dinner-9.webp",
-    "/dinner-10.webp",
+    "/default-image.jpg",
+    "/default-image.jpg",
+    "/default-image.jpg",
+    "/default-image.jpg",
+    "/default-image.jpg",
+    "/default-image.jpg",
   ],
   spa: [
-    "/pool-1.webp",
-    "/pool-4.webp",
-    "/pool-3.webp",
-    "/spa-1.webp",
-    "/spa.webp",
-    "/spa-2.webp",
+    "/default-image.jpg",
+    "/default-image.jpg",
+    "/default-image.jpg",
+    "/default-image.jpg",
+    "/default-image.jpg",
+    "/default-image.jpg",
   ],
   eventos: [
-    "/lobby.webp",
-    "/services2.webp",
-    "/lobby-1.webp",
-    "/dinner-5.webp",
-    "/pool-5.webp",
-    "/hotel-3.webp",
+    "/default-image.jpg",
+    "/default-image.jpg",
+    "/default-image.jpg",
+    "/default-image.jpg",
+    "/default-image.jpg",
+    "/default-image.jpg",
   ],
 };
 
@@ -58,20 +59,7 @@ export default function GalleryPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative h-[40vh] w-full">
-        <Image
-          src="/hotel-3.webp?height=800&width=1920"
-          alt="Grand Hotel Gallery"
-          fill
-          className="object-cover brightness-75"
-          priority
-        />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-4xl font-bold text-white sm:text-5xl md:text-6xl">
-            Galería
-          </h1>
-        </div>
-      </section>
+      <PagesHero bgUrl="/default-image.jpg" title="Galería" />
 
       {/* Gallery Section */}
       <section className="py-16 px-4 md:px-6">

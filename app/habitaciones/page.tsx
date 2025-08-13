@@ -1,4 +1,7 @@
-import { RoomCard } from "./RoomCard";
+import MyButton from "@/components/MyButton";
+import PagesHero from "@/components/PagesHero";
+import { RoomCard } from "@/components/RoomCard";
+import Link from "next/link";
 
 const packages = [
   {
@@ -45,18 +48,17 @@ const packages = [
   },
 ];
 
-const PackagesSection = () => {
+const RoomsPage = () => {
   return (
-    <section id="paquetes" className="py-20 bg-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-4 font-title">
-            Paquetes Turísticos
-          </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto font-secondary">
-            Elegí el paquete ideal para tu próxima escapada
-          </p>
-        </div>
+    <div className="flex flex-col">
+      <PagesHero bgUrl="/default-image.jpg" title="Habitaciones" />
+      <section className="py-16 px-4 bg-slate-50">
+        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-center">
+          Nuestras Habitaciones
+        </h2>
+        <p className="text-center text-slate-600 mb-12 max-w-3xl mx-auto">
+          Choose from our selection of comfortable and luxurious rooms
+        </p>
         <div className="container flex items-center justify-evenly mx-auto">
           {packages.map((pkg, index) => (
             <RoomCard
@@ -70,9 +72,14 @@ const PackagesSection = () => {
             />
           ))}
         </div>
-      </div>
-    </section>
+        <div className="text-center mt-12">
+          <MyButton>
+            <Link href="/reservas">Reservar Ahora</Link>
+          </MyButton>
+        </div>
+      </section>
+    </div>
   );
 };
 
-export default PackagesSection;
+export default RoomsPage;

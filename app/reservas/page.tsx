@@ -1,64 +1,27 @@
-import Button from "@/components/MyButton";
-import { RoomCard } from "@/components/RoomCard";
-import Image from "next/image";
-import Link from "next/link";
+import PagesHero from "@/components/PagesHero";
 
 export default function ReservationsPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative h-[40vh] w-full">
-        <Image
-          src="/placeholder.jpg?height=800&width=1920"
-          alt="Grand Hotel Room"
-          fill
-          className="object-cover brightness-75"
-          priority
-        />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-4xl font-bold text-white sm:text-5xl md:text-6xl">
-            Reservas
-          </h1>
-        </div>
-      </section>
+      <PagesHero bgUrl="/default-image.jpg" title="Reservas" />
 
       {/* Rooms Section */}
       <section className="py-16 px-4 bg-slate-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-4">Our Rooms</h2>
-          <p className="text-center text-slate-600 mb-12 max-w-3xl mx-auto">
-            Choose from our selection of comfortable and luxurious rooms
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <RoomCard
-              title="Standard Room"
-              description="Comfortable room with all basic amenities"
-              price={99}
-              image="/placeholder.jpg?height=300&width=400"
-              features={["Queen Bed", "Free Wi-Fi", "TV", "Air Conditioning"]}
-              slug="standard-room"
+        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-center">
+          Reservá tu Habitación
+        </h2>
+        <p className="text-center text-slate-600 mb-12 max-w-3xl mx-auto">
+          Choose from our selection of comfortable and luxurious rooms
+        </p>
+        <div className="w-full md:mt-10 mx-auto max-w-[1200px] h-auto">
+          <div className="w-full rounded-xl overflow-hidden shadow-lg">
+            <iframe
+              src="https://wubook.net/nneb/bk?f=today&n=1&ep=07b058c3&o=1.0.0.0"
+              title="Motor de reservas"
+              className="w-full h-[600px] sm:h-[700px] md:h-[800px] border-0"
+              loading="lazy"
             />
-            <RoomCard
-              title="Deluxe Room"
-              description="Spacious room with premium amenities"
-              price={149}
-              image="/placeholder.jpg?height=300&width=400"
-              features={["King Bed", "Free Wi-Fi", "Smart TV", "Mini Bar"]}
-              slug="deluxe-room"
-            />
-            <RoomCard
-              title="Suite"
-              description="Luxury suite with separate living area"
-              price={249}
-              image="/placeholder.jpg?height=300&width=400"
-              features={["King Bed", "Living Room", "Jacuzzi", "Ocean View"]}
-              slug="suite"
-            />
-          </div>
-          <div className="text-center mt-12">
-            <Button>
-              <Link href="/rooms">View All Rooms</Link>
-            </Button>
           </div>
         </div>
       </section>

@@ -10,11 +10,10 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { href: "#inicio", label: "Inicio" },
-    { href: "/galeria", label: "Galería" },
-    { href: "#servicios", label: "Servicios" },
+    { href: "/", label: "Inicio" },
     { href: "/nosotros", label: "Historia" },
-    { href: "#ubicacion", label: "Ubicación" },
+    { href: "/galeria", label: "Galería" },
+    { href: "/habitaciones", label: "Habitaciones" },
   ];
 
   return (
@@ -41,7 +40,9 @@ const Navbar = () => {
                 {item.label}
               </Link>
             ))}
-            <MyButton className="w-full">Reservar Ahora</MyButton>
+            <MyButton className="w-full">
+              <Link href={"/reservas"}>Reservar Ahora</Link>
+            </MyButton>
           </nav>
 
           {/* Mobile Navigation */}
@@ -67,7 +68,9 @@ const Navbar = () => {
                     {item.label}
                   </Link>
                 ))}
-                <MyButton className="w-full">Reservar Ahora</MyButton>
+                <MyButton className="w-full">
+                  <Link href={"/reservas"}>Reservar Ahora</Link>
+                </MyButton>
               </nav>
             </div>
           )}

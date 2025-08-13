@@ -1,24 +1,12 @@
 import Image from "next/image";
 import HistorySection from "./components/HistorySection";
+import PagesHero from "@/components/PagesHero";
 
 export default function AboutPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative h-[40vh] w-full">
-        <Image
-          src="/hotel-3.webp?height=800&width=1920"
-          alt="Grand Hotel Interior"
-          fill
-          className="object-cover brightness-75"
-          priority
-        />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-4xl font-bold text-white sm:text-5xl md:text-6xl">
-            Sobre Nosotros
-          </h1>
-        </div>
-      </section>
+      <PagesHero bgUrl="/default-image.jpg" title="Sobre Nosotros" />
 
       {/* History Section */}
       <HistorySection />
@@ -26,7 +14,7 @@ export default function AboutPage() {
       {/* Values Section */}
       <section className="bg-white py-20 px-4 md:px-6">
         <div className="container mx-auto">
-          <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6 font-title text-center">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-center mb-12">
             Nuestros Valores
           </h2>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
@@ -34,7 +22,7 @@ export default function AboutPage() {
               <div className="rounded-full bg-amber-100 p-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 text-amber-500"
+                  className="h-8 w-8 text-primary"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -58,7 +46,7 @@ export default function AboutPage() {
               <div className="rounded-full bg-amber-100 p-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 text-amber-500"
+                  className="h-8 w-8 text-primary"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -82,7 +70,7 @@ export default function AboutPage() {
               <div className="rounded-full bg-amber-100 p-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 text-amber-500"
+                  className="h-8 w-8 text-primary"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -107,23 +95,23 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      {/* <section className="py-16 px-4 md:px-6">
+      <section className="py-16 px-4 md:px-6">
         <div className="container mx-auto">
-          <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-12 font-title text-center">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-center mb-12">
             Nuestro Equipo Directivo
           </h2>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <div className="flex flex-col items-center text-center">
               <div className="relative h-64 w-64 overflow-hidden rounded-full">
                 <Image
-                  src="/placeholder.jpg?height=256&width=256"
+                  src="/default-image.jpg"
                   alt="Director General"
                   fill
                   className="object-cover"
                 />
               </div>
               <h3 className="mt-4 text-xl font-bold">Carlos Rodríguez</h3>
-              <p className="text-amber-500">Director General</p>
+              <p className="text-primary">Director General</p>
               <p className="mt-2 text-gray-600">
                 Con más de 20 años de experiencia en la industria hotelera de
                 lujo, Carlos lidera nuestro equipo con visión y pasión.
@@ -132,14 +120,14 @@ export default function AboutPage() {
             <div className="flex flex-col items-center text-center">
               <div className="relative h-64 w-64 overflow-hidden rounded-full">
                 <Image
-                  src="/placeholder.jpg?height=256&width=256"
+                  src="/default-image.jpg"
                   alt="Directora de Operaciones"
                   fill
                   className="object-cover"
                 />
               </div>
               <h3 className="mt-4 text-xl font-bold">María González</h3>
-              <p className="text-amber-500">Directora de Operaciones</p>
+              <p className="text-primary">Directora de Operaciones</p>
               <p className="mt-2 text-gray-600">
                 María asegura que cada aspecto de la experiencia del huésped
                 cumpla con nuestros exigentes estándares de calidad.
@@ -148,14 +136,14 @@ export default function AboutPage() {
             <div className="flex flex-col items-center text-center">
               <div className="relative h-64 w-64 overflow-hidden rounded-full">
                 <Image
-                  src="/placeholder.jpg?height=256&width=256"
+                  src="/default-image.jpg"
                   alt="Chef Ejecutivo"
                   fill
                   className="object-cover"
                 />
               </div>
               <h3 className="mt-4 text-xl font-bold">Javier Martínez</h3>
-              <p className="text-amber-500">Chef Ejecutivo</p>
+              <p className="text-primary">Chef Ejecutivo</p>
               <p className="mt-2 text-gray-600">
                 Reconocido internacionalmente, Javier crea experiencias
                 gastronómicas inolvidables que reflejan lo mejor de la cocina
@@ -164,7 +152,7 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
     </div>
   );
 }
