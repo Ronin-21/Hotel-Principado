@@ -4,30 +4,8 @@ const Hero = () => {
   return (
     <section
       id="inicio"
-      className="relative h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-dvh bg-cover bg-center bg-[url('/outside-5.jpg')] flex items-center justify-center overflow-hidden"
     >
-      <div className="absolute inset-0 z-0 bg-black">
-        {/* Video de fondo */}
-        {/* <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute w-full h-full object-cover"
-        >
-          <source src="/intro-2.mp4" type="video/mp4" />
-          Tu navegador no soporta el video HTML5.
-        </video> */}
-        <Image
-          src="/default-image.jpg"
-          alt="Hotel Amazing - Vista principal"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/60" />
-      </div>
-
       <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4">
         <h1 className="text-5xl md:text-7xl mb-6 font-semibold uppercase font-hero">
           Descubrí un nuevo modo de vivir Termas
@@ -36,6 +14,8 @@ const Hero = () => {
           Tu refugio termal de confort y descanso
         </h2>
       </div>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/60" />
     </section>
   );
 };

@@ -6,7 +6,7 @@ interface HeroProps {
 const PagesHero = ({ bgUrl, title }: HeroProps) => {
   return (
     <div
-      className="h-[40vh] w-full bg-cover bg-center relative"
+      className="h-[50vh] w-full bg-cover bg-center relative"
       style={{ backgroundImage: `url(${bgUrl})` }}
     >
       <div className="absolute inset-0 flex items-center justify-center bg-black/50">

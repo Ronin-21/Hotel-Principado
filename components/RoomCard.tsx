@@ -1,24 +1,20 @@
+import { Check } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { Check } from "lucide-react";
-import Button from "./MyButton";
+import MyButton from "./MyButton";
 
 interface RoomCardProps {
   title: string;
   description: string;
-  price: number;
   image?: string;
   features: string[];
-  slug: string;
 }
 
 export function RoomCard({
   title,
   description,
-  price,
   image,
   features,
-  slug,
 }: RoomCardProps) {
   return (
     <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow w-[350px]">
@@ -45,14 +41,10 @@ export function RoomCard({
           </div>
         </div>
 
-        <div className="flex items-center justify-between">
-          <div className="text-lg font-bold">
-            ${price}{" "}
-            <span className="text-sm font-normal text-slate-600">/ night</span>
-          </div>
-          <Button>
-            <Link href={`/rooms/${slug}`}>View Details</Link>
-          </Button>
+        <div className="flex items-center justify-start mt-8">
+          <MyButton>
+            <Link href={"/habitaciones"}>Ver más</Link>
+          </MyButton>
         </div>
       </div>
     </div>

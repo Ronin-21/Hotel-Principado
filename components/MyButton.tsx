@@ -11,10 +11,10 @@ interface ButtonProps {
 const buttonVariants = {
   variant: {
     default:
-      "bg-primary text-primary-foreground hover:bg-primary/90 rounded-sm cursor-pointer",
+      "bg-primary text-white font-medium hover:bg-primary/90 cursor-pointer",
     outline:
-      "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-    secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+      "border border-input bg-background hover:bg-accent hover:text-accent",
+    secondary: "bg-secondary text-secondary hover:bg-secondary/80",
   },
   size: {
     default: "h-10 px-4 py-2",

@@ -20,7 +20,7 @@ const ServicesSection = () => {
           </div>
           {/* text content */}
           <div className="order-1 flex flex-col items-center space-y-8 px-10">
-            <h4 className="md:text-xl font-medium text-[#268367] font-primary uppercase">
+            <h4 className="md:text-xl font-medium text-primary font-primary uppercase">
               SPA
             </h4>
             <h2 className="text-4xl md:text-5xl font-light text-gray-900 font-title">
@@ -48,7 +48,7 @@ const ServicesSection = () => {
           </div>
           {/* text content */}
           <div className="order-2 flex flex-col items-center space-y-8 px-10">
-            <h4 className="md:text-xl font-medium text-[#268367] font-primary uppercase">
+            <h4 className="md:text-xl font-medium text-primary font-primary uppercase">
               GYM
             </h4>
             <h2 className="text-4xl md:text-5xl font-light text-gray-900 font-title">
@@ -76,7 +76,7 @@ const ServicesSection = () => {
           </div>
           {/* text content */}
           <div className="order-2 flex flex-col items-center space-y-8 px-10">
-            <h4 className="md:text-xl font-medium text-[#268367] font-primary uppercase">
+            <h4 className="md:text-xl font-medium text-primary font-primary uppercase">
               SAUNA
             </h4>
             <h2 className="text-4xl md:text-5xl font-light text-gray-900 font-title">

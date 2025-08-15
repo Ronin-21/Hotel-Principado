@@ -16,13 +16,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <Image
-              src={"/default-logo.png"}
+              src={"/logo-color.png"}
               alt="logo"
               width={200}
               height={100}
             />
-            <p className="text-gray-300 my-4 italic">
-              Termas tiene historia! Hoy la vivís en el Hotel Amazing <br />
+            <p className="text-gray-300 my-5 italic">
+              Termas tiene historia! <br />
               Tu próxima escapada empieza acá!
             </p>
             <div className="flex space-x-4">

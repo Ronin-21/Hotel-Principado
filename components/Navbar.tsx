@@ -18,14 +18,14 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-100 z-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto py-2 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="overflow-hidden h-full relative w-40">
             <Image
-              src={"/default-logo.png"}
+              src={"/logo-black.png"}
               alt="logo"
               fill
-              className="object-cover"
+              className="object-contain"
             />
           </Link>
 

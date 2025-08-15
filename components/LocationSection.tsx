@@ -35,19 +35,19 @@ const LocationSection = () => {
               <ul className="space-y-2 text-gray-700">
                 <li className="flex justify-between">
                   <span>Plaza Miguel de Guemes</span>
-                  <span className="text-[#268367]">2 min</span>
+                  <span className="text-primary">2 min</span>
                 </li>
                 <li className="flex justify-between">
                   <span>Casino del Sol</span>
-                  <span className="text-[#268367]">5 min</span>
+                  <span className="text-primary">5 min</span>
                 </li>
                 <li className="flex justify-between">
                   <span>Iglesia Perpetuo Socorro</span>
-                  <span className="text-[#268367]">8 min</span>
+                  <span className="text-primary">8 min</span>
                 </li>
                 <li className="flex justify-between">
                   <span>Aeropuerto Internacional</span>
-                  <span className="text-[#268367]">25 min</span>
+                  <span className="text-primary">25 min</span>
                 </li>
               </ul>
             </div>
