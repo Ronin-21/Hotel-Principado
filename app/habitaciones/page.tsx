@@ -32,7 +32,7 @@ const tabs: Tab[] = [
 const rooms: Record<RoomKey, any[]> = {
   doble: [
     {
-      image: "/default-image.jpg",
+      image: "/room-6.jpg",
       estandard: {
         label: "Estandard",
         desayuno: "50.000",
@@ -47,7 +47,7 @@ const rooms: Record<RoomKey, any[]> = {
   ],
   triple: [
     {
-      image: "/default-image.jpg",
+      image: "/room-1.png",
       estandard: {
         label: "Estandard",
         desayuno: "60.000",
@@ -62,7 +62,7 @@ const rooms: Record<RoomKey, any[]> = {
   ],
   cuadruple: [
     {
-      image: "/default-image.jpg",
+      image: "/room-3.jpg",
       estandard: {
         label: "Estandard",
         desayuno: "80.000",
@@ -77,7 +77,7 @@ const rooms: Record<RoomKey, any[]> = {
   ],
   matrimonial: [
     {
-      image: "/default-image.jpg",
+      image: "/room-2.png",
       estandard: {
         label: "Estandard",
         desayuno: "50.000",
@@ -98,7 +98,7 @@ const RoomsPage = () => {
 
   return (
     <div className="flex flex-col">
-      <PagesHero bgUrl="/default-image.jpg" title="Habitaciones" />
+      <PagesHero bgUrl="/lobby-3.png" title="Habitaciones" />
       <section className="py-40 w-full bg-white">
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-center">
           Nuestras Habitaciones
@@ -123,14 +123,16 @@ const RoomsPage = () => {
           {/* Contenido */}
           <div className="flex flex-col items-center justify-between gap-6 w-full h-full">
             {/* Imagenes */}
-            <div className="relative w-full h-96 shadow-lg shadow-dark/10">
-              <Image
-                alt="img"
-                src={"/default-image.jpg"}
-                fill
-                className="object-cover"
-              />
-            </div>
+            {rooms[activeTab].map((room, index) => (
+              <div className="relative w-full h-96 shadow-lg shadow-dark/10">
+                <Image
+                  alt="img"
+                  src={room.image}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            ))}
             {/* Descripcion */}
             <div className="flex flex-col items-start gap-3 w-full px-5">
               <div className="flex items-center gap-5">

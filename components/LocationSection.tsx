@@ -20,7 +20,7 @@ const LocationSection = () => {
                 Dirección
               </h3>
               <p className="text-gray-700 text-lg">
-                Avenida Libertad N°120
+                Av. Manuel Belgrano 345
                 <br />
                 Las Termas de Río Hondo
                 <br />
@@ -65,14 +65,14 @@ const LocationSection = () => {
 
           <div className="relative h-96 lg:h-full min-h-[400px] rounded-lg overflow-hidden shadow-lg">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3538.9760201449376!2d-64.86641712373942!3d-27.50112121804716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94236e610ae9b341%3A0x969b77846583037d!2sHotel%20Ambassador!5e0!3m2!1ses!2sar!4v1750465890360!5m2!1ses!2sar"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3539.0669619783175!2d-64.86692582454!3d-27.498292876303015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94236e63f640ac47%3A0x4772044e8cad2ca4!2sPrincipado!5e0!3m2!1ses!2sar!4v1755297893699!5m2!1ses!2sar"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Ubicación Hotel Ambassador INN"
+              title="Ubicación Hotel Principado"
             />
           </div>
         </div>

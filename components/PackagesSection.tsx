@@ -5,7 +5,7 @@ const packages = [
     title: "Desayuno Buffet",
     description: "Disfrutá de un delicioso desayuno buffet",
     price: 15000,
-    image: "/default-image.jpg",
+    image: "/bar-1.png",
     features: [
       "Tv por cable",
       "Wifi",
@@ -19,7 +19,7 @@ const packages = [
     title: "Media Pensión",
     description: "Disfrutá de un delicioso desayuno buffet",
     price: 25000,
-    image: "/default-image.jpg",
+    image: "/bar-2.png",
     features: [
       "Tv por cable",
       "Wifi",
@@ -33,7 +33,7 @@ const packages = [
     title: "Pensión Completa",
     description: "Disfrutá de un delicioso desayuno buffet",
     price: 35000,
-    image: "/default-image.jpg",
+    image: "/bar-3.png",
     features: [
       "Tv por cable",
       "Wifi",
@@ -63,8 +63,6 @@ const PackagesSection = () => {
               key={index}
               description={pkg.description}
               features={pkg.features}
-              price={pkg.price}
-              slug={pkg.slug}
               title={pkg.title}
               image={pkg.image}
             />

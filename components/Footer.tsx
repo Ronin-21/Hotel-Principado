@@ -110,12 +110,12 @@ const Footer = () => {
               <div className="flex items-center">
                 <MapPin className="h-5 w-5 text-primary mr-3" />
                 <span className="text-gray-300">
-                  Avenida Libertad N°120, Las Termas de Río Hondo
+                  Av. Manuel Belgrano 345, Termas de Río Hondo
                 </span>
               </div>
               <div className="flex items-center">
                 <Phone className="h-5 w-5 text-primary mr-3" />
-                <span className="text-gray-300">+54 9 (3858) 53-7778</span>
+                <span className="text-gray-300">+54 9 (3858) 42-4147</span>
               </div>
               <div className="flex items-center">
                 <Mail className="h-5 w-5 text-primary mr-3" />
