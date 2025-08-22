@@ -1,20 +1,20 @@
-import Image from "next/image";
-import HistorySection from "./components/HistorySection";
 import PagesHero from "@/components/PagesHero";
+import { Lightbulb, Target } from "lucide-react";
+import HistorySection from "./components/HistorySection";
 
 export default function AboutPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <PagesHero bgUrl="/default-image.jpg" title="Sobre Nosotros" />
+      <PagesHero bgUrl="/outside-6.jpg" />
 
       {/* History Section */}
       <HistorySection />
 
       {/* Values Section */}
-      <section className="bg-white py-20 px-4 md:px-6">
+      <section className="bg-white my-20 md:my-40 px-4 md:px-6">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-center mb-12">
+          <h2 className="text-4xl font-semibold tracking-tight text-center mb-12 font-title">
             Nuestros Valores
           </h2>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
@@ -35,11 +35,13 @@ export default function AboutPage() {
                   />
                 </svg>
               </div>
-              <h3 className="mt-4 text-xl font-bold">Excelencia</h3>
+              <h3 className="mt-4 text-xl font-bold font-subtitle">
+                Respeto y Confianza
+              </h3>
               <p className="mt-2 text-gray-600">
-                Nos esforzamos por superar las expectativas en cada aspecto de
-                nuestro servicio, desde la comodidad de nuestras habitaciones
-                hasta la calidad de nuestra gastronomía.
+                Creemos en la importancia de crear vínculos duraderos con
+                nuestros visitantes, basados en la transparencia y el cuidado
+                constante.
               </p>
             </div>
             <div className="flex flex-col items-center text-center">
@@ -59,11 +61,12 @@ export default function AboutPage() {
                   />
                 </svg>
               </div>
-              <h3 className="mt-4 text-xl font-bold">Hospitalidad</h3>
+              <h3 className="mt-4 text-xl font-bold font-subtitle">
+                Hospitalidad con Calidez
+              </h3>
               <p className="mt-2 text-gray-600">
-                Creemos en el poder de la hospitalidad genuina para crear
-                conexiones significativas y experiencias memorables para
-                nuestros huéspedes.
+                Recibimos a cada huésped como parte de nuestra familia, con
+                cercanía y atención personalizada en cada detalle.
               </p>
             </div>
             <div className="flex flex-col items-center text-center">
@@ -83,71 +86,58 @@ export default function AboutPage() {
                   />
                 </svg>
               </div>
-              <h3 className="mt-4 text-xl font-bold">Innovación</h3>
+              <h3 className="mt-4 text-xl font-bold font-subtitle">
+                Identidad Regional
+              </h3>
               <p className="mt-2 text-gray-600">
-                Constantemente buscamos formas de mejorar y evolucionar,
-                integrando nuevas tecnologías y tendencias sin comprometer
-                nuestra esencia tradicional.
+                Resaltamos la esencia de Termas de Río Hondo, ofreciendo
+                experiencias auténticas que reflejan la cultura y hospitalidad
+                santiagueña.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="py-16 px-4 md:px-6">
-        <div className="container mx-auto">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-center mb-12">
-            Nuestro Equipo Directivo
+      {/* Mision & Vision Section */}
+      <section className="md:py-40 py-20 px-4 md:px-6 bg-light">
+        <div className="container mx-auto flex flex-col items-center gap-10">
+          <h2 className="text-4xl font-semibold text-center font-title">
+            Compromiso y Futuro
           </h2>
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="flex flex-col items-center text-center">
-              <div className="relative h-64 w-64 overflow-hidden rounded-full">
-                <Image
-                  src="/default-image.jpg"
-                  alt="Director General"
-                  fill
-                  className="object-cover"
-                />
+          <p className="md;text-lg text-dark/70 text-center max-w-2xl">
+            Trabajamos cada día para ofrecer un servicio de excelencia,
+            manteniendo la tradición de la hospitalidad santiagueña.
+          </p>
+          {/* Cards */}
+          <div className="flex flex-col md:flex-row items-center justify-center gap-14 w-full md:mt-10 mt-5">
+            {/* Card 1 */}
+            <div className="flex gap-6 md:gap-10 flex-col items-center justify-start p-8 md:p-12 text-center bg-white hover:bg-primary/75 rounded-lg transition h-full shadow-xl shadow-dark/30">
+              <div className="flex items-center gap-3 flex-col">
+                <Target className="size-12 text-tertiary" />
+                <h3 className="text-3xl md:text-4xl font-bold font-subtitle">
+                  Misión
+                </h3>
               </div>
-              <h3 className="mt-4 text-xl font-bold">Carlos Rodríguez</h3>
-              <p className="text-primary">Director General</p>
-              <p className="mt-2 text-gray-600">
-                Con más de 20 años de experiencia en la industria hotelera de
-                lujo, Carlos lidera nuestro equipo con visión y pasión.
+              <p className="tracking-tight leading-7 md:text-lg text-dark/75 max-w-xl">
+                Brindar a cada huésped una estadía placentera, donde el confort,
+                la gastronomía regional y la atención personalizada se combinen
+                para crear experiencias memorables en Termas de Río Hondo.
               </p>
             </div>
-            <div className="flex flex-col items-center text-center">
-              <div className="relative h-64 w-64 overflow-hidden rounded-full">
-                <Image
-                  src="/default-image.jpg"
-                  alt="Directora de Operaciones"
-                  fill
-                  className="object-cover"
-                />
+            {/* Card 2 */}
+            <div className="flex gap-6 md:gap-10 flex-col items-center justify-start p-8 md:p-12 text-center hover:bg-secondary/75 bg-white rounded-lg transition h-full shadow-xl shadow-dark/30">
+              <div className="flex items-center gap-3 flex-col">
+                <Lightbulb className="size-12 text-tertiary" />
+                <h3 className="text-3xl md:text-4xl font-bold font-subtitle">
+                  Visión
+                </h3>
               </div>
-              <h3 className="mt-4 text-xl font-bold">María González</h3>
-              <p className="text-primary">Directora de Operaciones</p>
-              <p className="mt-2 text-gray-600">
-                María asegura que cada aspecto de la experiencia del huésped
-                cumpla con nuestros exigentes estándares de calidad.
-              </p>
-            </div>
-            <div className="flex flex-col items-center text-center">
-              <div className="relative h-64 w-64 overflow-hidden rounded-full">
-                <Image
-                  src="/default-image.jpg"
-                  alt="Chef Ejecutivo"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <h3 className="mt-4 text-xl font-bold">Javier Martínez</h3>
-              <p className="text-primary">Chef Ejecutivo</p>
-              <p className="mt-2 text-gray-600">
-                Reconocido internacionalmente, Javier crea experiencias
-                gastronómicas inolvidables que reflejan lo mejor de la cocina
-                local e internacional.
+              <p className="tracking-tight leading-7 md:text-lg text-dark/75 max-w-xl">
+                Consolidarnos como un referente en la hotelería de la región,
+                reconocidos por nuestra excelencia en el servicio, nuestra
+                conexión con la cultura local y la confianza de quienes nos
+                eligen año tras año.
               </p>
             </div>
           </div>

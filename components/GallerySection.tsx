@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Button from "./MyButton";
+import MyButton from "./MyButton";
 
 const images = [
   { src: "/room-4.jpg", alt: "Habitaciones" },
@@ -14,16 +14,17 @@ const GallerySection = () => {
   return (
     <section id="galeria" className="py-20 bg-white">
       <div className="container flex flex-col gap-10 mx-auto">
-        <div className="text-center">
-          <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-4 font-title">
-            Galería
+        <div className="text-center px-4 md:px-0">
+          <h2 className="text-4xl md:text-5xl text-dark mb-4 font-title">
+            Nuestra Galería
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto font-secondary">
-            Descubrí cada rincón del Ambassador
+          <p className="md:text-xl text-dark/60 text-lg max-w-2xl mx-auto font-secondary">
+            Descubrí la esencia del Hotel Principado en imágenes que reflejan
+            confort, estilo y hospitalidad
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 md:px-0">
           {images.map((image, index) => (
             <div
               key={index}
@@ -42,11 +43,9 @@ const GallerySection = () => {
             </div>
           ))}
         </div>
-        <Button className="self-center">
-          <a href="/galeria" className="text-white">
-            Ver más
-          </a>
-        </Button>
+        <MyButton className="self-center">
+          <a href="/galeria">Ver más</a>
+        </MyButton>
       </div>
     </section>
   );

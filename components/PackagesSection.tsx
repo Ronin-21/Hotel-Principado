@@ -3,7 +3,8 @@ import { RoomCard } from "./RoomCard";
 const packages = [
   {
     title: "Desayuno Buffet",
-    description: "Disfrutá de un delicioso desayuno buffet",
+    description:
+      "Comenzá cada mañana con energía. Incluye un variado buffet de productos frescos, regionales y saludables",
     price: 15000,
     image: "/bar-1.png",
     features: [
@@ -17,7 +18,8 @@ const packages = [
   },
   {
     title: "Media Pensión",
-    description: "Disfrutá de un delicioso desayuno buffet",
+    description:
+      "La opción ideal para quienes desean combinar descanso y buena cocina. Incluye desayuno y una comida principal al día",
     price: 25000,
     image: "/bar-2.png",
     features: [
@@ -31,7 +33,8 @@ const packages = [
   },
   {
     title: "Pensión Completa",
-    description: "Disfrutá de un delicioso desayuno buffet",
+    description:
+      "La experiencia más completa: desayuno, almuerzo y cena con menú variado y atención personalizada en cada servicio",
     price: 35000,
     image: "/bar-3.png",
     features: [
@@ -50,14 +53,15 @@ const PackagesSection = () => {
     <section id="paquetes" className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-4 font-title">
-            Paquetes Turísticos
+          <h2 className="text-4xl md:text-5xl text-dark mb-4 font-title">
+            Paquetes a tu medida
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto font-secondary">
-            Elegí el paquete ideal para tu próxima escapada
+          <p className="md:text-xl text-lg text-dark/60 max-w-2xl mx-auto">
+            Elegí el régimen que mejor se adapte a tu estadía y disfrutá de la
+            mejor gastronomía en un entorno de confort y hospitalidad
           </p>
         </div>
-        <div className="container flex items-center justify-evenly mx-auto">
+        <div className="container flex flex-col md:flex-row gap-10 items-center justify-evenly mx-auto">
           {packages.map((pkg, index) => (
             <RoomCard
               key={index}

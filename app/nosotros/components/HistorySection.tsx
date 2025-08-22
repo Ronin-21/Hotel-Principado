@@ -2,38 +2,42 @@ import Image from "next/image";
 
 const HistorySection = () => {
   return (
-    <section id="historia" className="pt-40 pb-20 bg-gray-50">
+    <section className="md:py-40 py-20 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-          <div className="order-2 lg:order-1">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-10">
-              Un Proyecto con Identidad Local
+          <div className="order-1">
+            <h2 className="text-4xl font-semibold tracking-tight font-title">
+              Nuestra Historia
             </h2>
-            <div className="space-y-6 text-gray-700 leading-relaxed font-secondary">
-              <p className="text-lg">
-                Inaugurado en 1960, el Hotel Ambassador forma parte del corazón
-                termal de Las Termas de Río Hondo. Con 66 años de historia y 67
-                temporadas activas, sigue siendo un emblema de hospitalidad para
-                quienes buscan descanso y bienestar.
+            <h4 className="md:text-xl text-lg font-semibold text-primary font-subtitle mb-10 mt-3">
+              Tradición y hospitalidad en cada detalle
+            </h4>
+            <div className="space-y-6 md:text-lg text-dark/60 leading-relaxed">
+              <p>
+                El Hotel Principado nació con una visión clara: ofrecer a cada
+                viajero un espacio donde el confort se encuentre con la
+                tradición hospitalaria de Termas de Río Hondo. Desde nuestros
+                comienzos, hemos trabajado para ser mucho más que un hotel: un
+                punto de encuentro para quienes buscan descanso, buena
+                gastronomía y experiencias auténticas en el corazón de la
+                ciudad.
               </p>
-              <p className="text-lg">
-                En 2024, el Ambassador reabre sus puertas tras una renovación
-                total. Con una inversión significativa y el trabajo de más de
-                300 personas de la ciudad, cada detalle fue pensado para
-                combinar su esencia colonial con un diseño moderno, elegante y
-                minimalista.
+              <p>
+                Con el paso de los años, fuimos creciendo y renovándonos para
+                mantenernos siempre a la altura de lo que nuestros huéspedes
+                merecen. Hoy contamos con modernas instalaciones, un restaurante
+                con identidad regional, espacios pensados para la recreación
+                familiar y el servicio de nuestro equipo, disponible las 24
+                horas para que disfrutes cada momento sin preocupaciones.
               </p>
-              <p className="text-lg">
-                Sus 87 habitaciones fueron completamente remodeladas,
-                incorporando equipamiento de categoría premium y todos los
-                servicios que exige la hotelería actual. El resultado: una
-                experiencia sofisticada, cálida y funcional.
-              </p>
-              <p className="text-lg">
-                Esta nueva etapa proyecta al Ambassador como un hotel tres
-                estrellas superior, con visión de futuro y raíces profundas. Un
-                lugar donde tradición, calidad y calidez se encuentran para
-                crear momentos memorables.
+              <p>
+                Lo que nos distingue no es solo nuestra ubicación privilegiada
+                ni nuestras comodidades, sino la calidez con la que recibimos a
+                cada visitante. En el Hotel Principado entendemos que viajar es
+                crear recuerdos, y por eso cada detalle está diseñado para que
+                tu estadía sea única. Ya sea que vengas por descanso, turismo o
+                negocios, aquí encontrarás un lugar donde siempre querrás
+                volver.
               </p>
             </div>
             <div className="mt-8 grid grid-cols-3 gap-8 text-center">
@@ -53,18 +57,17 @@ const HistorySection = () => {
               </div>
             </div>
           </div>
-          <div className="order-1 lg:order-2">
-            <div className="relative">
-              <Image
-                src="/default-image.jpg"
-                alt="Historia del Hotel Elegante"
-                width={600}
-                height={600}
-                className="rounded-lg shadow-lg"
-              />
-              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-primary rounded-lg opacity-30" />
-              <div className="absolute -top-6 -right-6 w-24 h-24 bg-primary rounded-lg opacity-30" />
-            </div>
+          {/* Images */}
+          <div className="order-2 relative w-full">
+            <Image
+              src="/pool.png"
+              alt="Historia del Hotel Elegante"
+              width={600}
+              height={600}
+              className="rounded-lg shadow-lg"
+            />
+            <div className="absolute -bottom-6 md:-left-6 left-0 w-32 h-32 bg-primary rounded-lg opacity-30" />
+            <div className="absolute -top-6 md:-right-6 right-0 w-24 h-24 bg-primary rounded-lg opacity-30" />
           </div>
         </div>
       </div>

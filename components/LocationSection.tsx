@@ -3,23 +3,21 @@ const LocationSection = () => {
     <section id="ubicacion" className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-4 font-title">
-            Dónde encontrarnos
+          <h2 className="text-4xl md:text-5xl text-dark mb-4 font-title">
+            Dónde Encontrarnos
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto font-secondary">
-            Estratégicamente ubicado para que disfrutes todo lo que ofrece la
-            ciudad. <br />
-            Cerca del centro y de los principales atractivos turísticos
+          <p className="md:text-xl text-lg text-dark/60 max-w-3xl mx-auto">
+            Ubicado en el corazón de Termas de Río Hondo, el Hotel Principado
+            combina comodidad y cercanía. Desde aquí podrás acceder fácilmente a
+            las principales atracciones turísticas
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="space-y-6">
             <div>
-              <h3 className="text-2xl font-light text-gray-900 mb-4">
-                Dirección
-              </h3>
-              <p className="text-gray-700 text-lg">
+              <h3 className="text-2xl text-dark mb-4">Dirección</h3>
+              <p className="text-dark/70 text-lg">
                 Av. Manuel Belgrano 345
                 <br />
                 Las Termas de Río Hondo
@@ -29,10 +27,10 @@ const LocationSection = () => {
             </div>
 
             <div>
-              <h3 className="text-2xl font-light text-gray-900 mb-4">
+              <h3 className="text-2xl text-dark mb-4">
                 Puntos de Interés Cercanos
               </h3>
-              <ul className="space-y-2 text-gray-700">
+              <ul className="space-y-2 text-dark/70">
                 <li className="flex justify-between">
                   <span>Plaza Miguel de Guemes</span>
                   <span className="text-primary">2 min</span>
@@ -42,8 +40,8 @@ const LocationSection = () => {
                   <span className="text-primary">5 min</span>
                 </li>
                 <li className="flex justify-between">
-                  <span>Iglesia Perpetuo Socorro</span>
-                  <span className="text-primary">8 min</span>
+                  <span>Embalse Rio Hondo</span>
+                  <span className="text-primary">15 min</span>
                 </li>
                 <li className="flex justify-between">
                   <span>Aeropuerto Internacional</span>
@@ -53,10 +51,8 @@ const LocationSection = () => {
             </div>
 
             <div>
-              <h3 className="text-2xl font-light text-gray-900 mb-4">
-                Transporte
-              </h3>
-              <p className="text-gray-700">
+              <h3 className="text-2xl text-dark mb-4">Transporte</h3>
+              <p className="text-dark/70">
                 Servicio de traslado gratuito desde el aeropuerto.
                 Estacionamiento privado disponible para huéspedes.
               </p>

@@ -11,15 +11,15 @@ interface ButtonProps {
 const buttonVariants = {
   variant: {
     default:
-      "bg-primary text-white font-medium hover:bg-primary/90 cursor-pointer",
+      "bg-secondary text-white font-bold hover:bg-dark/90 hover:text-primary cursor-pointer transition duration-500",
     outline:
-      "border border-input bg-background hover:bg-accent hover:text-accent",
-    secondary: "bg-secondary text-secondary hover:bg-secondary/80",
+      "outline-2 bg-transparent text-primary font-bold hover:bg-primary hover:text-white cursor-pointer transition duration-500",
+    secondary:
+      "bg-primary text-white hover:bg-dark cursor-pointer transition duration-500",
   },
   size: {
     default: "h-10 px-4 py-2",
-    sm: "h-9 rounded-md px-3",
-    lg: "h-11 rounded-md px-8",
+    lg: "py-3 px-8 text-2xl",
   },
 };
 

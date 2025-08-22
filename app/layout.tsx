@@ -1,27 +1,27 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import type { Metadata } from "next";
+import { Karla, Open_Sans } from "next/font/google";
 import localFont from "next/font/local";
-import { Eczar, Lora, Marcellus, Poppins } from "next/font/google";
 import "./globals.css";
-
-const blacksword = localFont({
-  src: "../public/Blacksword.otf",
-  variable: "--font-title",
-  display: "swap",
-});
 
 const arsenica = localFont({
   src: "../public/Arsenica-Medium.ttf",
-  variable: "--font-hero",
+  variable: "--font-arsenica",
   display: "swap",
 });
 
-const fontPoppins = Poppins({
-  variable: "--font-poppins",
-  weight: ["300", "400", "500", "700", "900"],
+const fontKarla = Karla({
+  variable: "--font-karla",
   subsets: ["latin", "latin-ext"], // Aquí puedes agregar los subconjuntos que necesites
   preload: true, // Asegúrate de que esté habilitado si lo deseas
+});
+
+const openSans = Open_Sans({
+  subsets: ["latin"],
+  weight: ["400", "600"],
+  variable: "--font-open-sans",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -44,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${fontPoppins.variable} ${blacksword.variable} ${arsenica.variable} antialiased min-h-screen bg-white`}
+        className={`${arsenica.variable} ${fontKarla.variable} ${openSans.variable} antialiased min-h-screen bg-white`}
       >
         <Navbar />
         {children}

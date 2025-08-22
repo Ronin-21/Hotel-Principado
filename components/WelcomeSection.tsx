@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Button from "./MyButton";
+import MyButton from "./MyButton";
 
 const WelcomeSection = () => {
   return (
@@ -10,48 +10,46 @@ const WelcomeSection = () => {
           {/* images */}
           <div className="order-1 flex justify-center relative h-[300px] md:h-[400px]">
             <Image
-              src={"/lobby-4.jpg"}
+              src={"/pool-1.jpg"}
               alt="Historia del Hotel Elegante"
               width={600}
               height={600}
               className={`object-cover h-[300px] md:h-[400px] absolute bottom-0 rounded-lg shadow-lg`}
             />
             <Image
-              src="/pool-1.jpg"
+              src="/lobby-3.png"
               alt="Historia del Hotel Elegante"
               width={300}
               height={400}
-              className={`absolute md:-bottom-16 md:-left-12 -bottom-5 ring-[10px] ring-light shadow-lg`}
+              className={`absolute h-[250px] md:h-[300px] object-cover md:-bottom-16 md:-left-12 -bottom-5 ring-[10px] ring-light`}
             />
           </div>
           {/* text content */}
           <div className="order-2 flex flex-col items-start space-y-6">
-            <h4 className="md:text-xl font-medium text-primary font-primary uppercase">
-              Elegancia y Comodidad
+            <h4 className="md:text-xl font-semibold text-primary font-subtitle uppercase">
+              Tradición, confort y hospitalidad
             </h4>
-            <h2 className="text-4xl md:text-5xl font-light text-gray-900 font-title text-center md:text-left">
+            <h2 className="text-4xl md:text-5xl font-title text-center md:text-left">
               Bienvenidos al Grand Hotel Principado
             </h2>
-            <div className="space-y-6 text-gray-700 leading-relaxed font-secondary">
-              <p className="text-lg text-center md:text-left">
-                Ícono termal desde 1960, el Hotel Ambassador reabre sus puertas
-                completamente renovado para ofrecer una experiencia única en Las
-                Termas de Río Hondo. Con un diseño que honra su esencia colonial
-                y la elegancia de la hotelería moderna, cada espacio ha sido
-                pensado para brindar confort, bienestar y calidez. <br />
-                Más que una renovación, es un renacer: 87 habitaciones premium,
-                instalaciones de primer nivel y una profunda conexión con la
-                comunidad local —más de 300 trabajadores y proveedores termenses
-                participaron en esta gran transformación. <br />
-                Hoy vuelve a brillar como un símbolo de hospitalidad y
-                compromiso con el turismo de calidad.
+            <div className="space-y-6 text-dark/70 leading-relaxed">
+              <p className="md:text-lg text-center md:text-left">
+                En el corazón de la ciudad, te esperamos con la calidez que nos
+                caracteriza, servicios de primer nivel y el inconfundible relax
+                de las aguas termales. Aquí comienza tu experiencia de confort y
+                bienestar. <br />
+                Desde hace años, el Hotel Principado es sinónimo de descanso y
+                buena atención en la ciudad. Combinamos modernas instalaciones,
+                gastronomía regional y actividades para toda la familia, para
+                que tu estadía sea tan especial como la merecés. <br />
+                Vas a encontrar más que un hospedaje: una experiencia completa
+                que une comodidad, entretenimiento y el poder renovador de las
+                termas.
               </p>
             </div>
-            <Button className="self-center md:self-start">
-              <Link href="/nosotros" className="text-white">
-                Leer más
-              </Link>
-            </Button>
+            <MyButton className="self-center md:self-start">
+              <Link href="/nosotros">Leer más</Link>
+            </MyButton>
           </div>
         </div>
       </div>
