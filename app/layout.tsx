@@ -11,7 +11,7 @@ const arsenica = localFont({
   display: "swap",
 });
 
-const fontKarla = Karla({
+const karla = Karla({
   variable: "--font-karla",
   subsets: ["latin", "latin-ext"], // Aquí puedes agregar los subconjuntos que necesites
   preload: true, // Asegúrate de que esté habilitado si lo deseas
@@ -26,13 +26,45 @@ const openSans = Open_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "Hotel Principado",
-    template: "%s - Hotel Principado",
+    default: "Grand Hotel Principado | Hotel 4 Estrellas en Termas",
+    template: "%s | Grand Hotel Principado",
   },
   description:
-    "Descubre el Hotel Principado, tu refugio de lujo en la ciudad. Disfruta de habitaciones elegantes, servicios excepcionales y una ubicación inmejorable. ¡Reserva ahora y vive una experiencia inolvidable!",
+    "Grand Hotel Principado, un hotel 4 estrellas en Termas, ideal para disfrutar de confort y elegancia. Habitaciones modernas, restaurante gourmet, spa y ubicación privilegiada cerca de los principales atractivos. Reserva online y viví una estadía inolvidable.",
+  keywords: [
+    "hotel en Termas",
+    "Grand Hotel Principado",
+    "hotel 4 estrellas",
+    "habitaciones de lujo",
+    "reserva de hotel",
+    "hotel céntrico Termas",
+    "spa y restaurante hotel",
+  ],
+  openGraph: {
+    type: "website",
+    url: "https://www.tudominio.com",
+    title: "Grand Hotel Principado | Hotel 4 Estrellas en Termas",
+    description:
+      "Descubre el Grand Hotel Principado en Termas. Habitaciones elegantes, spa, restaurante gourmet y la mejor ubicación para tu estadía.",
+    images: [
+      {
+        url: "/portada.webp",
+        width: 1200,
+        height: 630,
+        alt: "Grand Hotel Principado - Fachada y entrada principal",
+      },
+    ],
+    siteName: "Grand Hotel Principado",
+  },
   twitter: {
     card: "summary_large_image",
+    title: "Grand Hotel Principado | Hotel 4 Estrellas en Termas",
+    description:
+      "Elegancia, confort y ubicación privilegiada en Termas. Reservá ahora tu estadía en el Grand Hotel Principado.",
+    images: ["/portada.webp"],
+  },
+  alternates: {
+    canonical: "https://www.tudominio.com",
   },
 };
 
@@ -44,7 +76,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${arsenica.variable} ${fontKarla.variable} ${openSans.variable} antialiased min-h-screen bg-white`}
+        className={`${arsenica.variable} ${karla.variable} ${openSans.variable} antialiased min-h-screen bg-white`}
       >
         <Navbar />
         {children}

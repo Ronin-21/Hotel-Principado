@@ -5,7 +5,7 @@ export default function GalleryPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <PagesHero bgUrl="/bar-4.png" />
+      <PagesHero bgUrl="/bar-4.webp" />
       {/* Gallery Section */}
       <section className="pb-40 pt-20 px-4 md:px-6">
         <div className="container mx-auto">

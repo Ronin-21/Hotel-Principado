@@ -43,24 +43,24 @@ const HistorySection = () => {
             <div className="mt-8 grid grid-cols-3 gap-8 text-center">
               <div>
                 <div className="text-3xl font-light text-primary mb-2">60+</div>
-                <div className="text-gray-600">Años de Historia</div>
+                <div className="text-dark/60">Años de Historia</div>
               </div>
               <div>
                 <div className="text-3xl font-light text-primary mb-2">
                   50k+
                 </div>
-                <div className="text-gray-600">Huéspedes Satisfechos</div>
+                <div className="text-dark/60">Huéspedes Satisfechos</div>
               </div>
               <div>
                 <div className="text-3xl font-light text-primary mb-2">80+</div>
-                <div className="text-gray-600">Habitaciones</div>
+                <div className="text-dark/60">Habitaciones</div>
               </div>
             </div>
           </div>
           {/* Images */}
           <div className="order-2 relative w-full">
             <Image
-              src="/pool.png"
+              src="/pool.webp"
               alt="Historia del Hotel Elegante"
               width={600}
               height={600}

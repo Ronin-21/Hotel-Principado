@@ -39,7 +39,7 @@ const tabs: Tab[] = [
 const rooms: Record<RoomKey, any[]> = {
   doble: [
     {
-      image: "/room-6.jpg",
+      image: "/room-6.webp",
       estandard: {
         label: "Estandard",
         description:
@@ -58,7 +58,7 @@ const rooms: Record<RoomKey, any[]> = {
   ],
   triple: [
     {
-      image: "/room-11.png",
+      image: "/room-11.webp",
       estandard: {
         label: "Estandard",
         description:
@@ -77,7 +77,7 @@ const rooms: Record<RoomKey, any[]> = {
   ],
   cuadruple: [
     {
-      image: "/room-1.png",
+      image: "/room-1.webp",
       estandard: {
         label: "Estandard",
         description:
@@ -96,7 +96,7 @@ const rooms: Record<RoomKey, any[]> = {
   ],
   matrimonial: [
     {
-      image: "/room-2.png",
+      image: "/room-2.webp",
       estandard: {
         label: "Estandard",
         description:
@@ -115,7 +115,7 @@ const rooms: Record<RoomKey, any[]> = {
   ],
   dobleMatrimonial: [
     {
-      image: "/room-4.jpg",
+      image: "/room-4.webp",
       estandard: {
         label: "Estandard",
         description:
@@ -134,7 +134,7 @@ const rooms: Record<RoomKey, any[]> = {
   ],
   matrimonialTriple: [
     {
-      image: "/room-3.jpg",
+      image: "/room-3.webp",
       estandard: {
         label: "Estandard",
         description:

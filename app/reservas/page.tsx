@@ -4,7 +4,7 @@ export default function ReservationsPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <PagesHero bgUrl="/lobby-5.png" />
+      <PagesHero bgUrl="/lobby-5.webp" />
 
       {/* Rooms Section */}
       <section className="pt-20 pb-40 px-4 bg-light">

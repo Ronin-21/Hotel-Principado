@@ -4,7 +4,7 @@ import RoomsGallery from "./components/RoomsGallery";
 const RoomsPage = () => {
   return (
     <div className="flex flex-col">
-      <PagesHero bgUrl="/room-3.jpg" />
+      <PagesHero bgUrl="/room-3.webp" />
       <section className="md:pb-40 pb-20 pt-20 w-full bg-white">
         <div className="md:mb-20 mb-10 gap-5 text-center flex flex-col items-center px-4 md:px-0">
           <h2 className="text-4xl font-semibold tracking-tight font-title">

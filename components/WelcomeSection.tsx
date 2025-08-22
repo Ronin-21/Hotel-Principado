@@ -10,14 +10,14 @@ const WelcomeSection = () => {
           {/* images */}
           <div className="order-1 flex justify-center relative h-[300px] md:h-[400px]">
             <Image
-              src={"/pool-1.jpg"}
+              src={"/pool-1.webp"}
               alt="Historia del Hotel Elegante"
               width={600}
               height={600}
               className={`object-cover h-[300px] md:h-[400px] absolute bottom-0 rounded-lg shadow-lg`}
             />
             <Image
-              src="/lobby-3.png"
+              src="/lobby-3.webp"
               alt="Historia del Hotel Elegante"
               width={300}
               height={400}

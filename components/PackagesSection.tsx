@@ -6,7 +6,7 @@ const packages = [
     description:
       "Comenzá cada mañana con energía. Incluye un variado buffet de productos frescos, regionales y saludables",
     price: 15000,
-    image: "/bar-1.png",
+    image: "/bar-1.webp",
     features: [
       "Tv por cable",
       "Wifi",
@@ -21,7 +21,7 @@ const packages = [
     description:
       "La opción ideal para quienes desean combinar descanso y buena cocina. Incluye desayuno y una comida principal al día",
     price: 25000,
-    image: "/bar-2.png",
+    image: "/bar-2.webp",
     features: [
       "Tv por cable",
       "Wifi",
@@ -36,7 +36,7 @@ const packages = [
     description:
       "La experiencia más completa: desayuno, almuerzo y cena con menú variado y atención personalizada en cada servicio",
     price: 35000,
-    image: "/bar-3.png",
+    image: "/bar-3.webp",
     features: [
       "Tv por cable",
       "Wifi",

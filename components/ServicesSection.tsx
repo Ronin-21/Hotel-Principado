@@ -12,7 +12,7 @@ const ServicesSection = () => {
           {/* images */}
           <div className="order-2 h-[400px] lg:h-[500px]">
             <Image
-              src="/bar-4.png"
+              src="/bar-4.webp"
               alt="Historia del Hotel Elegante"
               width={500}
               height={600}
@@ -41,7 +41,7 @@ const ServicesSection = () => {
           {/* images */}
           <div className="order-2 h-[400px] lg:h-[500px]">
             <Image
-              src="/pool-4.jpg"
+              src="/pool-4.webp"
               alt="Historia del Hotel Elegante"
               width={500}
               height={600}
@@ -71,7 +71,7 @@ const ServicesSection = () => {
           {/* images */}
           <div className="order-3 h-[400px] lg:h-[500px]">
             <Image
-              src="/outside-3.jpg"
+              src="/outside-3.webp"
               alt="Historia del Hotel Elegante"
               width={500}
               height={600}

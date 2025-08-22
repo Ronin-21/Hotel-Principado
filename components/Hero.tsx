@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <section
       id="inicio"
-      className="relative min-h-dvh bg-cover bg-center bg-[url('/outside-5.jpg')] flex items-center justify-center overflow-hidden"
+      className="relative min-h-dvh bg-cover bg-center bg-[url('/outside-5.webp')] flex items-center justify-center overflow-hidden"
     >
       <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 text-shadow-md text-shadow-dark/50">
         <h1 className="text-5xl md:text-8xl mb-6 font-semibold font-title">

@@ -2,10 +2,10 @@ import Image from "next/image";
 import MyButton from "./MyButton";
 
 const images = [
-  { src: "/room-4.jpg", alt: "Habitaciones" },
-  { src: "/lobby-1.png", alt: "Sala principal" },
+  { src: "/room-4.webp", alt: "Habitaciones" },
+  { src: "/lobby-1.webp", alt: "Sala principal" },
   {
-    src: "/bar-1.png",
+    src: "/bar-1.webp",
     alt: "Restaurante",
   },
 ];

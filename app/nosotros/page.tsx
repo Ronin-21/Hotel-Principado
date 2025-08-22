@@ -6,7 +6,7 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <PagesHero bgUrl="/outside-6.jpg" />
+      <PagesHero bgUrl="/outside-6.webp" />
 
       {/* History Section */}
       <HistorySection />
