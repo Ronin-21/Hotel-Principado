@@ -13,14 +13,14 @@ const WelcomeSection = () => {
               alt="Historia del Hotel Elegante"
               width={600}
               height={600}
-              className={`object-cover h-[300px] md:h-[400px] absolute bottom-0 rounded-lg shadow-lg`}
+              className="object-cover h-[300px] md:h-[400px] absolute bottom-0 rounded-lg shadow-lg intersect:animate-fade-left intersect:animate-delay-200"
             />
             <Image
               src="/lobby-3.webp"
               alt="Historia del Hotel Elegante"
               width={300}
               height={400}
-              className={`absolute h-[250px] md:h-[300px] object-cover md:-bottom-16 md:-left-12 -bottom-5 ring-[10px] ring-light`}
+              className="absolute h-[250px] md:h-[300px] object-cover md:-bottom-16 md:-left-12 -bottom-5 ring-[10px] ring-light intersect:animate-fade-right intersect:animate-delay-200"
             />
           </div>
           {/* text content */}

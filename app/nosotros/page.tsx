@@ -18,7 +18,8 @@ export default function AboutPage() {
             Nuestros Valores
           </h2>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-            <div className="flex flex-col items-center text-center">
+            {/* Card 1 */}
+            <div className="flex flex-col items-center text-center intersect:animate-fade-down intersect:animate-delay-200">
               <div className="rounded-full bg-amber-100 p-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +45,8 @@ export default function AboutPage() {
                 constante.
               </p>
             </div>
-            <div className="flex flex-col items-center text-center">
+            {/* Card 2 */}
+            <div className="flex flex-col items-center text-center intersect:animate-fade-down intersect:animate-delay-300">
               <div className="rounded-full bg-amber-100 p-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +71,8 @@ export default function AboutPage() {
                 cercanía y atención personalizada en cada detalle.
               </p>
             </div>
-            <div className="flex flex-col items-center text-center">
+            {/* Card 3 */}
+            <div className="flex flex-col items-center text-center intersect:animate-fade-down intersect:animate-delay-400">
               <div className="rounded-full bg-amber-100 p-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -112,7 +115,7 @@ export default function AboutPage() {
           {/* Cards */}
           <div className="flex flex-col md:flex-row items-center justify-center gap-14 w-full md:mt-10 mt-5">
             {/* Card 1 */}
-            <div className="flex gap-6 md:gap-10 flex-col items-center justify-start p-8 md:p-12 text-center bg-white hover:bg-primary/75 rounded-lg transition h-full shadow-xl shadow-dark/30">
+            <div className="flex gap-6 md:gap-10 flex-col items-center justify-start p-8 md:p-12 text-center bg-white rounded-lg md:h-[350px] h-full shadow-xl shadow-dark/30 intersect:animate-fade-right intersect:animate-delay-200">
               <div className="flex items-center gap-3 flex-col">
                 <Target className="size-12 text-tertiary" />
                 <h3 className="text-3xl md:text-4xl font-bold font-secondary">
@@ -126,14 +129,14 @@ export default function AboutPage() {
               </p>
             </div>
             {/* Card 2 */}
-            <div className="flex gap-6 md:gap-10 flex-col items-center justify-start p-8 md:p-12 text-center hover:bg-secondary/75 bg-white rounded-lg transition h-full shadow-xl shadow-dark/30">
+            <div className="flex gap-6 md:gap-10 flex-col items-center justify-start p-8 md:p-12 text-center bg-dark text-white rounded-lg md:h-[350px] h-full shadow-xl shadow-dark/30 intersect:animate-fade-left intersect:animate-delay-200">
               <div className="flex items-center gap-3 flex-col">
-                <Lightbulb className="size-12 text-tertiary" />
+                <Lightbulb className="size-12 text-primary" />
                 <h3 className="text-3xl md:text-4xl font-bold font-secondary">
                   Visión
                 </h3>
               </div>
-              <p className="tracking-tight leading-7 md:text-lg text-dark/75 max-w-xl">
+              <p className="tracking-tight leading-7 md:text-lg max-w-xl">
                 Consolidarnos como un referente en la hotelería de la región,
                 reconocidos por nuestra excelencia en el servicio, nuestra
                 conexión con la cultura local y la confianza de quienes nos

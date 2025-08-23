@@ -13,13 +13,7 @@ const features = [
   "Aire acondicionado",
 ];
 
-type RoomKey =
-  | "doble"
-  | "triple"
-  | "cuadruple"
-  | "matrimonial"
-  | "cuadrupleMatrimonial"
-  | "tripleMatrimonial";
+type RoomKey = "doble" | "triple" | "cuadruple" | "matrimonial";
 
 interface Tab {
   key: RoomKey;
@@ -30,9 +24,7 @@ const tabs: Tab[] = [
   { key: "doble", label: "Doble" },
   { key: "matrimonial", label: "Matrimonial" },
   { key: "triple", label: "Triple" },
-  { key: "tripleMatrimonial", label: "Matrimonial + Simple" },
   { key: "cuadruple", label: "Cuádruple" },
-  { key: "cuadrupleMatrimonial", label: "Cuadruple Matrimonial" },
 ];
 
 const rooms: Record<RoomKey, any[]> = {
@@ -43,14 +35,14 @@ const rooms: Record<RoomKey, any[]> = {
         label: "Estándar",
         description:
           "Equipadas con dos camas individuales, pensadas para amigos o compañeros de viaje que desean un descanso práctico y confortable",
-        desayuno: "50.000",
-        mediaPension: "80.000",
+        desayuno: "90.000",
+        mediaPension: "100.000",
       },
       superior: {
         label: "Superior",
         description:
           "Más amplias, con mayor comodidad y detalles de diseño, para que cada huésped disfrute al máximo de su estadía",
-        desayuno: "70.000",
+        desayuno: "90.000",
         mediaPension: "100.000",
       },
     },
@@ -62,15 +54,15 @@ const rooms: Record<RoomKey, any[]> = {
         label: "Estándar",
         description:
           "Perfectas para parejas que buscan comodidad a un precio accesible, con un ambiente acogedor y todo lo esencial para descansar",
-        desayuno: "50.000",
-        mediaPension: "80.000",
+        desayuno: "90.000",
+        mediaPension: "100.000",
       },
       superior: {
         label: "Superior",
         description:
           "Habitaciones elegantes y modernas, con detalles que marcan la diferencia para una estadía romántica y placentera",
-        desayuno: "95.000",
-        mediaPension: "115.000",
+        desayuno: "90.000",
+        mediaPension: "100.000",
       },
     },
   ],
@@ -81,34 +73,15 @@ const rooms: Record<RoomKey, any[]> = {
         label: "Estándar",
         description:
           "Espacios funcionales y bien distribuidos, ideales para familias pequeñas o grupos reducidos",
-        desayuno: "60.000",
-        mediaPension: "90.000",
+        desayuno: "135.000",
+        mediaPension: "100.000",
       },
       superior: {
         label: "Superior",
         description:
           "Más amplias y confortables, pensadas para brindar comodidad a todos los huéspedes sin perder intimidad ni descanso",
-        desayuno: "90.000",
-        mediaPension: "110.000",
-      },
-    },
-  ],
-  tripleMatrimonial: [
-    {
-      image: "/room-3.webp",
-      estandar: {
-        label: "Estándar",
-        description:
-          "Una cama matrimonial + una cama simple para 2–3 personas. Ambiente cálido, climatización, Wi-Fi y baño privado. Opción versátil para familias pequeñas",
-        desayuno: "50.000",
-        mediaPension: "80.000",
-      },
-      superior: {
-        label: "Superior",
-        description:
-          "Diseño moderno y mayor confort: mejores textiles, iluminación cuidada y amenities superiores. Ideal para quienes desean un plus de espacio y detalle sin perder practicidad",
-        desayuno: "95.000",
-        mediaPension: "115.000",
+        desayuno: "135.000",
+        mediaPension: "100.000",
       },
     },
   ],
@@ -119,34 +92,15 @@ const rooms: Record<RoomKey, any[]> = {
         label: "Estándar",
         description:
           "Amplia y funcional para familias o grupos. Configuración habitual: 1 cama matrimonial + 2 camas simples (o 4 simples, según disponibilidad). Climatización, Wi-Fi, TV y baño privado para un descanso práctico y cómodo",
-        desayuno: "80.000",
+        desayuno: "180.000",
         mediaPension: "100.000",
       },
       superior: {
         label: "Superior",
         description:
           "Más metros y mejor distribución, con espacios de guardado extra y amenities mejorados. Posibles vistas internas/externas, frigobar y detalles de confort pensados para estancias más largas",
-        desayuno: "100.000",
-        mediaPension: "150.000",
-      },
-    },
-  ],
-  cuadrupleMatrimonial: [
-    {
-      image: "/room-4.webp",
-      estandar: {
-        label: "Estándar",
-        description:
-          "Ideal para familias o amigos que prefieren mayor espacio de descanso. Dos camas matrimoniales, climatización, Wi-Fi y baño privado. Comodidad accesible sin resignar practicidad",
-        desayuno: "50.000",
-        mediaPension: "80.000",
-      },
-      superior: {
-        label: "Superior",
-        description:
-          "Decoración renovada, superficies más generosas y equipamiento premium. Perfecta para 3–4 huéspedes que buscan confort extra y una experiencia más elevada",
-        desayuno: "95.000",
-        mediaPension: "115.000",
+        desayuno: "180.000",
+        mediaPension: "100.000",
       },
     },
   ],
@@ -157,7 +111,7 @@ const RoomsGallery = () => {
   const [activeRoom, setActiveRoom] = useState("Estándar");
 
   return (
-    <div className="w-full md:w-[1200px] md:h-[800px] flex flex-col md:flex-row items-start justify-between mx-auto">
+    <div className="w-full md:w-[1200px] md:h-[800px] flex flex-col md:flex-row items-start justify-between mx-auto intersect:animate-fade-down intersect:animate-delay-200">
       {/* Barra lateral */}
       <div className="flex flex-col items-center w-full md:w-1/4 md:h-96 md:p-0 px-4 shadow-lg shadow-dark/30 font-secondary">
         {tabs.map((tab) => (
@@ -173,18 +127,18 @@ const RoomsGallery = () => {
         ))}
       </div>
       {/* Contenido */}
-      <div className="flex flex-col items-center justify-between gap-6 w-full h-full px-4 md:px-0 bg-white shadow-lg shadow-dark/30">
+      <div className="flex flex-col items-center justify-between w-full h-full px-4 md:px-0 bg-white shadow-lg shadow-dark/30">
         {/* Imagenes */}
         {rooms[activeTab].map((room, index) => (
           <div
             key={index}
-            className="relative w-full md:h-96 h-80 shadow-lg shadow-dark/10"
+            className="relative w-full md:min-h-96 h-80 shadow-lg shadow-dark/10"
           >
             <Image alt="img" src={room.image} fill className="object-cover" />
           </div>
         ))}
         {/* Descripcion */}
-        <div className="flex flex-col items-start gap-3 w-full px-5">
+        <div className="flex flex-col items-start justify-start gap-3 w-full h-full p-5">
           {/* Tabs */}
           <div className="flex items-center gap-5 font-secondary">
             <h3

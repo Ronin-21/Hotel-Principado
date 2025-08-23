@@ -68,10 +68,10 @@ const HistorySection = () => {
               alt="Historia del Hotel Elegante"
               width={600}
               height={600}
-              className="rounded-lg shadow-lg"
+              className="rounded-lg shadow-lg intersect:animate-fade-down intersect:animate-delay-200"
             />
-            <div className="absolute -bottom-6 md:-left-6 left-0 w-32 h-32 bg-primary rounded-lg opacity-30" />
-            <div className="absolute -top-6 md:-right-6 right-0 w-24 h-24 bg-primary rounded-lg opacity-30" />
+            <div className="absolute -bottom-6 md:-left-6 left-0 w-32 h-32 bg-primary/30 rounded-lg intersect:animate-fade-right intersect:animate-delay-200" />
+            <div className="absolute -top-6 md:-right-6 right-0 w-24 h-24 bg-primary/30 rounded-lg intersect:animate-fade-left intersect:animate-delay-200" />
           </div>
         </div>
       </div>

@@ -16,7 +16,7 @@ const ServicesSection = () => {
               alt="Historia del Hotel Elegante"
               width={500}
               height={600}
-              className="h-full w-full object-cover shadow-xl"
+              className="h-full w-full object-cover shadow-xl intersect:animate-fade-left intersect:animate-delay-200"
             />
           </div>
           {/* text content */}
@@ -45,7 +45,7 @@ const ServicesSection = () => {
               alt="Historia del Hotel Elegante"
               width={500}
               height={600}
-              className="h-full w-full object-cover shadow-xl"
+              className="h-full w-full object-cover shadow-xl intersect:animate-fade-right intersect:animate-delay-200"
             />
           </div>
           {/* text content */}
@@ -75,7 +75,7 @@ const ServicesSection = () => {
               alt="Historia del Hotel Elegante"
               width={500}
               height={600}
-              className="h-full w-full object-cover shadow-xl"
+              className="h-full w-full object-cover shadow-xl intersect:animate-fade-left intersect:animate-delay-200"
             />
           </div>
           {/* text content */}

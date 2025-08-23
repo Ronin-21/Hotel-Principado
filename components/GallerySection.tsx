@@ -28,7 +28,9 @@ const GallerySection = () => {
           {images.map((image, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-lg aspect-[4/3]"
+              className={`group relative overflow-hidden rounded-lg aspect-[4/3] intersect:animate-fade-down intersect:animate-delay-${
+                index + 1
+              }00`}
             >
               <Image
                 src={image.src || "/default-image.jpg"}
