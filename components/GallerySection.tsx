@@ -15,7 +15,7 @@ const GallerySection = () => {
     <section id="galeria" className="py-20 bg-white">
       <div className="container flex flex-col gap-10 mx-auto">
         <div className="text-center px-4 md:px-0">
-          <h2 className="text-4xl md:text-5xl text-dark mb-4 font-title">
+          <h2 className="text-4xl md:text-6xl text-dark mb-4 font-title">
             Nuestra Galería
           </h2>
           <p className="md:text-xl text-dark/60 text-lg max-w-2xl mx-auto font-secondary">
@@ -43,8 +43,8 @@ const GallerySection = () => {
             </div>
           ))}
         </div>
-        <MyButton className="self-center">
-          <a href="/galeria">Ver más</a>
+        <MyButton className="self-center" href="/galeria">
+          Ver más
         </MyButton>
       </div>
     </section>

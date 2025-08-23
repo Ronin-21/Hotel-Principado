@@ -9,10 +9,10 @@ export default function ReservationsPage() {
       {/* Rooms Section */}
       <section className="pt-20 pb-40 px-4 bg-light">
         <div className="mb-20 gap-5 text-center flex flex-col items-center">
-          <h2 className="text-4xl font-semibold tracking-tight font-title">
+          <h2 className="text-5xl md:text-6xl font-title">
             Reservá tu estadía
           </h2>
-          <h4 className="md:text-xl text-lg font-semibold text-primary font-subtitle">
+          <h4 className="md:text-xl text-lg font-semibold text-primary font-secondary">
             Tu próxima experiencia en Termas comienza aquí
           </h4>
           <p className="md:text-lg text-dark/60 max-w-3xl md:mt-5">
@@ -37,12 +37,14 @@ export default function ReservationsPage() {
       {/* Policies Section */}
       <section className="md:py-40 py-20 px-4 md:px-6">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-4xl font-semibold tracking-tight text-center mb-12 font-title">
+          <h2 className="text-5xl md:text-6xl text-center mb-12 font-title">
             Políticas de Reserva
           </h2>
           <div className="space-y-8">
             <div>
-              <h3 className="text-xl font-bold">Check-in / Check-out</h3>
+              <h3 className="text-xl font-bold font-secondary">
+                Check-in / Check-out
+              </h3>
               <p className="mt-2 text-dark/60">
                 El horario de check-in es a partir de las 15:00 horas. El
                 check-out debe realizarse antes de las 12:00 horas. Consulte
@@ -51,7 +53,9 @@ export default function ReservationsPage() {
               </p>
             </div>
             <div>
-              <h3 className="text-xl font-bold">Cancelaciones</h3>
+              <h3 className="text-xl font-bold font-secondary">
+                Cancelaciones
+              </h3>
               <p className="mt-2 text-dark/60">
                 Las cancelaciones realizadas con más de 48 horas de antelación
                 recibirán un reembolso completo. Las cancelaciones dentro de las
@@ -60,7 +64,7 @@ export default function ReservationsPage() {
               </p>
             </div>
             <div>
-              <h3 className="text-xl font-bold">Depósito</h3>
+              <h3 className="text-xl font-bold font-secondary">Depósito</h3>
               <p className="mt-2 text-dark/60">
                 Se requiere un depósito equivalente al costo de una noche al
                 momento de la reserva para garantizarla. Este depósito se
@@ -68,7 +72,7 @@ export default function ReservationsPage() {
               </p>
             </div>
             <div>
-              <h3 className="text-xl font-bold">Mascotas</h3>
+              <h3 className="text-xl font-bold font-secondary">Mascotas</h3>
               <p className="mt-2 text-dark/60">
                 Grand Hotel es pet-friendly en habitaciones seleccionadas. Se
                 aplica un cargo adicional por mascota. Por favor, infórmenos al

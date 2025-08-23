@@ -3,7 +3,7 @@ const LocationSection = () => {
     <section id="ubicacion" className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl text-dark mb-4 font-title">
+          <h2 className="text-4xl md:text-6xl text-dark mb-4 font-title">
             Dónde Encontrarnos
           </h2>
           <p className="md:text-xl text-lg text-dark/60 max-w-3xl mx-auto">
@@ -16,7 +16,9 @@ const LocationSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="space-y-6">
             <div>
-              <h3 className="text-2xl text-dark mb-4">Dirección</h3>
+              <h3 className="text-2xl text-dark mb-4 font-secondary font-semibold">
+                Dirección
+              </h3>
               <p className="text-dark/70 text-lg">
                 Av. Manuel Belgrano 345
                 <br />
@@ -27,7 +29,7 @@ const LocationSection = () => {
             </div>
 
             <div>
-              <h3 className="text-2xl text-dark mb-4">
+              <h3 className="text-2xl text-dark mb-4 font-secondary font-semibold">
                 Puntos de Interés Cercanos
               </h3>
               <ul className="space-y-2 text-dark/70">
@@ -51,7 +53,9 @@ const LocationSection = () => {
             </div>
 
             <div>
-              <h3 className="text-2xl text-dark mb-4">Transporte</h3>
+              <h3 className="text-2xl text-dark mb-4 font-secondary font-semibold">
+                Transporte
+              </h3>
               <p className="text-dark/70">
                 Servicio de traslado gratuito desde el aeropuerto.
                 Estacionamiento privado disponible para huéspedes.

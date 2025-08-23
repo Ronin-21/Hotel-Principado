@@ -58,13 +58,13 @@ const GalleryGrid = () => {
   return (
     <div className="max-w-7xl mx-auto md:mt-10 mt-5">
       {/* Botones de pestañas */}
-      <div className="grid grid-cols-4 gap-2 mb-8">
+      <div className="grid grid-cols-4 gap-2 mb-8 bg-white rounded-lg shadow-md overflow-hidden">
         {tabs.map((tab) => (
           <button
             key={tab.key}
             onClick={() => setActiveTab(tab.key)}
             // aria-selected={activeTab === tab.key}
-            className={`py-2 md:px-4 font-semibold text-center border-b-[3px] cursor-pointer transition-all duration-300 ${
+            className={`py-2 md:px-4 font-semibold font-secondary md:text-lg text-center border-b-[3px] cursor-pointer transition-all duration-300 ${
               activeTab === tab.key
                 ? "border-primary text-primary"
                 : "border-transparent text-dark/60 hover:text-primary"
@@ -77,7 +77,10 @@ const GalleryGrid = () => {
       {/* Contenido de cada pestaña */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
         {images[activeTab].map((src, index) => (
-          <div key={index} className="overflow-hidden rounded-lg h-80">
+          <div
+            key={index}
+            className="overflow-hidden rounded-lg h-80 shadow-md shadow-dark/50"
+          >
             <Image
               src={`${src}?height=400&width=600`}
               alt={"Imagen de " + activeTab}

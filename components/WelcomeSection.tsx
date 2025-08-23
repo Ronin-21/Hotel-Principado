@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import MyButton from "./MyButton";
 
 const WelcomeSection = () => {
@@ -26,10 +25,10 @@ const WelcomeSection = () => {
           </div>
           {/* text content */}
           <div className="order-2 flex flex-col items-start space-y-6">
-            <h4 className="md:text-xl font-semibold text-primary font-subtitle uppercase">
+            <h4 className="md:text-xl font-semibold text-primary font-secondary uppercase">
               Tradición, confort y hospitalidad
             </h4>
-            <h2 className="text-4xl md:text-5xl font-title text-center md:text-left">
+            <h2 className="text-5xl md:text-6xl font-title text-center md:text-left">
               Bienvenidos al Grand Hotel Principado
             </h2>
             <div className="space-y-6 text-dark/70 leading-relaxed">
@@ -47,8 +46,8 @@ const WelcomeSection = () => {
                 termas.
               </p>
             </div>
-            <MyButton className="self-center md:self-start">
-              <Link href="/nosotros">Leer más</Link>
+            <MyButton href="/nosotros" className="self-center md:self-start">
+              Leer más
             </MyButton>
           </div>
         </div>

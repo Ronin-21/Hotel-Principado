@@ -14,7 +14,7 @@ export default function AboutPage() {
       {/* Values Section */}
       <section className="bg-white my-20 md:my-40 px-4 md:px-6">
         <div className="container mx-auto">
-          <h2 className="text-4xl font-semibold tracking-tight text-center mb-12 font-title">
+          <h2 className="text-5xl md:text-6xl text-center mb-12 font-title">
             Nuestros Valores
           </h2>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
@@ -35,10 +35,10 @@ export default function AboutPage() {
                   />
                 </svg>
               </div>
-              <h3 className="mt-4 text-xl font-bold font-subtitle">
+              <h3 className="mt-4 text-2xl font-bold font-secondary">
                 Respeto y Confianza
               </h3>
-              <p className="mt-2 text-gray-600">
+              <p className="mt-2 text-dark/60">
                 Creemos en la importancia de crear vínculos duraderos con
                 nuestros visitantes, basados en la transparencia y el cuidado
                 constante.
@@ -61,10 +61,10 @@ export default function AboutPage() {
                   />
                 </svg>
               </div>
-              <h3 className="mt-4 text-xl font-bold font-subtitle">
+              <h3 className="mt-4 text-2xl font-bold font-secondary">
                 Hospitalidad con Calidez
               </h3>
-              <p className="mt-2 text-gray-600">
+              <p className="mt-2 text-dark/60">
                 Recibimos a cada huésped como parte de nuestra familia, con
                 cercanía y atención personalizada en cada detalle.
               </p>
@@ -86,10 +86,10 @@ export default function AboutPage() {
                   />
                 </svg>
               </div>
-              <h3 className="mt-4 text-xl font-bold font-subtitle">
+              <h3 className="mt-4 text-2xl font-bold font-secondary">
                 Identidad Regional
               </h3>
-              <p className="mt-2 text-gray-600">
+              <p className="mt-2 text-dark/60">
                 Resaltamos la esencia de Termas de Río Hondo, ofreciendo
                 experiencias auténticas que reflejan la cultura y hospitalidad
                 santiagueña.
@@ -102,10 +102,10 @@ export default function AboutPage() {
       {/* Mision & Vision Section */}
       <section className="md:py-40 py-20 px-4 md:px-6 bg-light">
         <div className="container mx-auto flex flex-col items-center gap-10">
-          <h2 className="text-4xl font-semibold text-center font-title">
+          <h2 className="text-5xl md:text-6xl text-center font-title">
             Compromiso y Futuro
           </h2>
-          <p className="md;text-lg text-dark/70 text-center max-w-2xl">
+          <p className="md:text-lg text-dark/70 text-center max-w-2xl">
             Trabajamos cada día para ofrecer un servicio de excelencia,
             manteniendo la tradición de la hospitalidad santiagueña.
           </p>
@@ -115,7 +115,7 @@ export default function AboutPage() {
             <div className="flex gap-6 md:gap-10 flex-col items-center justify-start p-8 md:p-12 text-center bg-white hover:bg-primary/75 rounded-lg transition h-full shadow-xl shadow-dark/30">
               <div className="flex items-center gap-3 flex-col">
                 <Target className="size-12 text-tertiary" />
-                <h3 className="text-3xl md:text-4xl font-bold font-subtitle">
+                <h3 className="text-3xl md:text-4xl font-bold font-secondary">
                   Misión
                 </h3>
               </div>
@@ -129,7 +129,7 @@ export default function AboutPage() {
             <div className="flex gap-6 md:gap-10 flex-col items-center justify-start p-8 md:p-12 text-center hover:bg-secondary/75 bg-white rounded-lg transition h-full shadow-xl shadow-dark/30">
               <div className="flex items-center gap-3 flex-col">
                 <Lightbulb className="size-12 text-tertiary" />
-                <h3 className="text-3xl md:text-4xl font-bold font-subtitle">
+                <h3 className="text-3xl md:text-4xl font-bold font-secondary">
                   Visión
                 </h3>
               </div>

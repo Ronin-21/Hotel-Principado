@@ -9,7 +9,7 @@ const AmenitiesSection = () => {
             <div className="bg-slate-100 p-4 rounded-full mb-4">
               <Waves className="h-8 w-8 text-primary" />
             </div>
-            <h4 className="text-xl font-bold font-subtitle mb-2">
+            <h4 className="text-xl font-bold font-secondary mb-2">
               Aguas Termales
             </h4>
             <p className="text-dark/50">
@@ -20,7 +20,7 @@ const AmenitiesSection = () => {
             <div className="bg-slate-100 p-4 rounded-full mb-4">
               <Coffee className="h-8 w-8 text-primary" />
             </div>
-            <h4 className="text-xl font-bold font-subtitle mb-2">
+            <h4 className="text-xl font-bold font-secondary mb-2">
               Desayuno y Merienda
             </h4>
             <p className="text-dark/50">Servicio de desayuno y merienda.</p>
@@ -29,7 +29,7 @@ const AmenitiesSection = () => {
             <div className="bg-slate-100 p-4 rounded-full mb-4">
               <Car className="h-8 w-8 text-primary" />
             </div>
-            <h3 className="text-xl font-bold font-subtitle mb-2">
+            <h3 className="text-xl font-bold font-secondary mb-2">
               Estacionamiento
             </h3>
             <p className="text-dark/50">Seguro y exclusivo para huéspedes.</p>
@@ -38,7 +38,7 @@ const AmenitiesSection = () => {
             <div className="bg-slate-100 p-4 rounded-full mb-4">
               <Drama className="h-8 w-8 text-primary" />
             </div>
-            <h3 className="text-xl font-bold font-subtitle mb-2">
+            <h3 className="text-xl font-bold font-secondary mb-2">
               Shows y Recreación
             </h3>
             <p className="text-dark/50">

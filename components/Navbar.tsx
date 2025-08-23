@@ -1,6 +1,6 @@
 "use client";
 
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 w-full bg-white backdrop-blur-sm border-b border-dark/10 z-50">
       {/* Container */}
-      <div className="container mx-auto flex items-center justify-between h-20 p-2">
+      <div className="container mx-auto flex items-center justify-between h-20 p-2 font-secondary">
         {/* Logo */}
         <Link href="/" className="overflow-hidden h-full relative w-40">
           <Image
@@ -36,7 +36,7 @@ const Navbar = () => {
             <Link
               key={item.href}
               href={item.href}
-              className="text-dark/70 hover:text-primary transition-colors duration-200"
+              className="text-dark/70 hover:text-primary transition-colors duration-200 text-lg"
             >
               {item.label}
             </Link>
@@ -50,9 +50,10 @@ const Navbar = () => {
         <div className="md:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
             className="text-dark/80 hover:text-primary focus:outline-none"
           >
-            <Menu size={36} />
+            {isOpen ? <X size={36} /> : <Menu size={36} />}
           </button>
         </div>
         {/* Mobile Menu Overlay */}
@@ -63,15 +64,17 @@ const Navbar = () => {
                 key={item.href}
                 href={item.href}
                 onClick={() => setIsOpen(false)} // Cierra el menú al hacer clic
-                className="text-dark/80 font-subtitle font-semibold text-3xl"
+                className="text-dark/80 font-semibold text-3xl"
               >
                 {item.label}
               </Link>
             ))}
-            <MyButton size="lg">
-              <Link href={"/reservas"} onClick={() => setIsOpen(false)}>
-                Reservar Ahora
-              </Link>
+            <MyButton
+              href="/reservas"
+              size="lg"
+              onClick={() => setIsOpen(false)}
+            >
+              Reservar Ahora
             </MyButton>
           </div>
         )}

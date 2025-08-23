@@ -7,13 +7,11 @@ export default function GalleryPage() {
       {/* Hero Section */}
       <PagesHero bgUrl="/bar-4.webp" />
       {/* Gallery Section */}
-      <section className="pb-40 pt-20 px-4 md:px-6">
+      <section className="pb-40 pt-20 px-4 md:px-6 bg-light">
         <div className="container mx-auto">
           <div className="mb-20 gap-5 text-center flex flex-col items-center">
-            <h2 className="text-4xl font-semibold tracking-tight font-title">
-              Nuestra Galería
-            </h2>
-            <h4 className="md:text-xl text-lg font-semibold text-primary font-subtitle">
+            <h2 className="md:text-6xl text-5xl font-title">Nuestra Galería</h2>
+            <h4 className="md:text-xl text-lg font-semibold text-primary font-secondary">
               Cada rincón cuenta su historia
             </h4>
             <p className="md:text-lg text-dark/60 max-w-3xl mt-5">

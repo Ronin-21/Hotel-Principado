@@ -1,30 +1,40 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import type { Metadata } from "next";
-import { Karla, Open_Sans } from "next/font/google";
+import { Great_Vibes, Karla, Martel } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 
 const arsenica = localFont({
-  src: "../public/Arsenica-Medium.ttf",
+  src: "../public/Arsenica-Medium.woff2",
   variable: "--font-arsenica",
   display: "swap",
 });
 
 const karla = Karla({
   variable: "--font-karla",
+  weight: ["400", "600", "700"],
+  display: "swap",
   subsets: ["latin", "latin-ext"], // Aquí puedes agregar los subconjuntos que necesites
   preload: true, // Asegúrate de que esté habilitado si lo deseas
 });
 
-const openSans = Open_Sans({
+const martel = Martel({
   subsets: ["latin"],
-  weight: ["400", "600"],
-  variable: "--font-open-sans",
+  weight: ["400", "600", "700"],
+  variable: "--font-martel",
+  display: "swap",
+});
+
+const greatVibes = Great_Vibes({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-great-vibes",
   display: "swap",
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.grandhotelprincipado.com"),
   title: {
     default: "Grand Hotel Principado | Hotel 4 Estrellas en Termas",
     template: "%s | Grand Hotel Principado",
@@ -42,7 +52,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: "website",
-    url: "https://www.tudominio.com",
+    url: "https://www.grandhotelprincipado.com",
     title: "Grand Hotel Principado | Hotel 4 Estrellas en Termas",
     description:
       "Descubre el Grand Hotel Principado en Termas. Habitaciones elegantes, spa, restaurante gourmet y la mejor ubicación para tu estadía.",
@@ -64,7 +74,7 @@ export const metadata: Metadata = {
     images: ["/portada.webp"],
   },
   alternates: {
-    canonical: "https://www.tudominio.com",
+    canonical: "https://www.grandhotelprincipado.com",
   },
 };
 
@@ -76,7 +86,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${arsenica.variable} ${karla.variable} ${openSans.variable} antialiased min-h-screen bg-white`}
+        className={`${arsenica.variable} ${karla.variable} ${martel.variable} ${greatVibes.variable} antialiased min-h-screen bg-white`}
       >
         <Navbar />
         {children}

@@ -7,10 +7,10 @@ const RoomsPage = () => {
       <PagesHero bgUrl="/room-3.webp" />
       <section className="md:pb-40 pb-20 pt-20 w-full bg-light">
         <div className="md:mb-20 mb-10 gap-5 text-center flex flex-col items-center px-4 md:px-0">
-          <h2 className="text-4xl font-semibold tracking-tight font-title">
+          <h2 className="text-5xl md:text-6xl font-title">
             Nuestras Habitaciones
           </h2>
-          <h4 className="md:text-xl text-lg font-semibold text-primary font-subtitle">
+          <h4 className="md:text-xl text-lg font-semibold text-primary font-secondary">
             Confort y estilo para cada huésped
           </h4>
           <p className="md:text-lg text-dark/60 max-w-3xl mt-5">

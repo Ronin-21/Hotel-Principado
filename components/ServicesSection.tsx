@@ -21,7 +21,7 @@ const ServicesSection = () => {
           </div>
           {/* text content */}
           <div className="order-1 flex flex-col items-center space-y-8 text-center">
-            <h4 className="md:text-xl font-bold text-primary font-subtitle uppercase">
+            <h4 className="md:text-xl font-bold text-primary font-secondary uppercase">
               resto
             </h4>
             <h2 className="text-4xl md:text-5xl text-dark font-title">
@@ -50,7 +50,7 @@ const ServicesSection = () => {
           </div>
           {/* text content */}
           <div className="order-2 flex flex-col items-center space-y-8 text-center">
-            <h4 className="md:text-xl font-bold text-primary font-subtitle uppercase">
+            <h4 className="md:text-xl font-bold text-primary font-secondary uppercase">
               piletas
             </h4>
             <h2 className="text-4xl md:text-5xl text-dark font-title">
@@ -80,7 +80,7 @@ const ServicesSection = () => {
           </div>
           {/* text content */}
           <div className="order-2 flex flex-col items-center space-y-8 text-center">
-            <h4 className="md:text-xl font-bold text-primary font-subtitle uppercase">
+            <h4 className="md:text-xl font-bold text-primary font-secondary uppercase">
               solarium
             </h4>
             <h2 className="text-4xl md:text-5xl text-dark font-title">

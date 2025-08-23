@@ -53,7 +53,7 @@ const PackagesSection = () => {
     <section id="paquetes" className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl text-dark mb-4 font-title">
+          <h2 className="text-4xl md:text-6xl text-dark mb-4 font-title">
             Paquetes a tu medida
           </h2>
           <p className="md:text-xl text-lg text-dark/60 max-w-2xl mx-auto">

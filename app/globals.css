@@ -10,9 +10,10 @@
   --color-tertiary: #9a031e;
   --color-light: #f3f3f3;
   --color-dark: #0a1128;
-  --font-primary: "Open Sans";
-  --font-title: "Arsenica";
-  --font-subtitle: "Karla";
+  --font-primary: "Martel";
+  --font-secondary: "Karla";
+  --font-title: "Great Vibes";
+  --font-hero: "Arsenica";
 }
 
 #root {

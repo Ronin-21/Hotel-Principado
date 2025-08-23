@@ -20,7 +20,7 @@ const navItems = [
 const Footer = () => {
   return (
     <footer className="bg-dark text-white py-16">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 font-secondary">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo & Social */}
           <div>
@@ -57,7 +57,7 @@ const Footer = () => {
           </div>
           {/* Nav Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Enlaces Rápidos</h4>
+            <h4 className="text-xl font-semibold mb-4">Enlaces Rápidos</h4>
             <div className="flex flex-col items-start gap-2">
               {navItems.map((item) => (
                 <Link
@@ -72,7 +72,7 @@ const Footer = () => {
           </div>
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Servicios</h4>
+            <h4 className="text-xl font-semibold mb-4">Servicios</h4>
             <ul className="space-y-2 text-light">
               <li>Spa y Gimnasio</li>
               <li>Restaurante</li>
@@ -83,7 +83,7 @@ const Footer = () => {
           </div>
           {/* Contact */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contacto</h4>
+            <h4 className="text-xl font-semibold mb-4">Contacto</h4>
             <div className="space-y-3">
               <div className="flex items-center">
                 <MapPin className="h-5 w-5 text-primary mr-3" />

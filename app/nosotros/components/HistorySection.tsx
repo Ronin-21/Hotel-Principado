@@ -6,13 +6,13 @@ const HistorySection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div className="order-1">
-            <h2 className="text-4xl font-semibold tracking-tight font-title">
+            <h2 className="text-5xl md:text-6xl font-title">
               Nuestra Historia
             </h2>
-            <h4 className="md:text-xl text-lg font-semibold text-primary font-subtitle mb-10 mt-3">
+            <h4 className="md:text-xl text-lg font-semibold text-primary font-secondary mb-10 mt-3">
               Tradición y hospitalidad en cada detalle
             </h4>
-            <div className="space-y-6 md:text-lg text-dark/60 leading-relaxed">
+            <div className="space-y-6 text-dark/60 leading-relaxed">
               <p>
                 El Hotel Principado nació con una visión clara: ofrecer a cada
                 viajero un espacio donde el confort se encuentre con la
@@ -40,20 +40,24 @@ const HistorySection = () => {
                 volver.
               </p>
             </div>
-            <div className="mt-8 grid grid-cols-3 gap-8 text-center">
+            <div className="mt-8 grid grid-cols-3 gap-8 text-center font-secondary">
               <div>
                 <div className="text-3xl font-light text-primary mb-2">60+</div>
-                <div className="text-dark/60">Años de Historia</div>
+                <div className="text-dark/60 font-semibold">
+                  Años de Historia
+                </div>
               </div>
               <div>
                 <div className="text-3xl font-light text-primary mb-2">
                   50k+
                 </div>
-                <div className="text-dark/60">Huéspedes Satisfechos</div>
+                <div className="text-dark/60 font-semibold">
+                  Huéspedes Satisfechos
+                </div>
               </div>
               <div>
                 <div className="text-3xl font-light text-primary mb-2">80+</div>
-                <div className="text-dark/60">Habitaciones</div>
+                <div className="text-dark/60 font-semibold">Habitaciones</div>
               </div>
             </div>
           </div>
