@@ -14,17 +14,17 @@ const GallerySection = () => {
   return (
     <section id="galeria" className="py-20 bg-white">
       <div className="container flex flex-col gap-10 mx-auto">
-        <div className="text-center px-4 md:px-0">
-          <h2 className="text-4xl md:text-6xl text-dark mb-4 font-title">
+        <div className="px-4 text-center md:px-0">
+          <h2 className="mb-4 text-4xl md:text-6xl text-dark font-title">
             Nuestra Galería
           </h2>
-          <p className="md:text-xl text-dark/60 text-lg max-w-2xl mx-auto font-secondary">
+          <p className="max-w-2xl mx-auto text-lg md:text-xl text-dark/60 font-secondary">
             Descubrí la esencia del Hotel Principado en imágenes que reflejan
             confort, estilo y hospitalidad
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 md:px-0">
+        <div className="grid grid-cols-1 gap-6 px-4 md:grid-cols-2 lg:grid-cols-3 md:px-0">
           {images.map((image, index) => (
             <div
               key={index}
@@ -37,9 +37,11 @@ const GallerySection = () => {
                 alt={image.alt}
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
+                loading="lazy"
+                quality={70}
               />
-              <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute inset-0 transition-opacity duration-300 opacity-0 bg-black/20 group-hover:opacity-100" />
+              <div className="absolute text-white transition-opacity duration-300 opacity-0 bottom-4 left-4 group-hover:opacity-100">
                 <p className="text-lg font-medium">{image.alt}</p>
               </div>
             </div>

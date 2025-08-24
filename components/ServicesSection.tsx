@@ -4,11 +4,11 @@ const ServicesSection = () => {
   return (
     <section
       id="servicios"
-      className="lg:py-40 bg-light py-20 flex items-center justify-center"
+      className="flex items-center justify-center py-20 lg:py-40 bg-light"
     >
       <div className="container px-4 sm:px-6 lg:px-8">
         {/* Service 1 */}
-        <div className="grid mt-10 grid-cols-1 gap-5 lg:mt-0 lg:gap-0 lg:grid-cols-2 items-center">
+        <div className="grid items-center grid-cols-1 gap-5 mt-10 lg:mt-0 lg:gap-0 lg:grid-cols-2">
           {/* images */}
           <div className="order-2 h-[400px] lg:h-[500px]">
             <Image
@@ -16,18 +16,20 @@ const ServicesSection = () => {
               alt="Historia del Hotel Elegante"
               width={500}
               height={600}
-              className="h-full w-full object-cover shadow-xl intersect:animate-fade-left intersect:animate-delay-200"
+              className="object-cover w-full h-full shadow-xl intersect:animate-fade-left intersect:animate-delay-200"
+              loading="lazy"
+              quality={70}
             />
           </div>
           {/* text content */}
-          <div className="order-1 flex flex-col items-center space-y-8 text-center">
-            <h4 className="md:text-xl font-bold text-primary font-secondary uppercase">
+          <div className="flex flex-col items-center order-1 space-y-8 text-center">
+            <h4 className="font-bold uppercase md:text-xl text-primary font-secondary">
               resto
             </h4>
             <h2 className="text-4xl md:text-5xl text-dark font-title">
               Restaurante Regional
             </h2>
-            <p className="md:text-lg text-dark/70 leading-relaxed max-w-xl">
+            <p className="max-w-xl leading-relaxed md:text-lg text-dark/70">
               Nuestro restaurante combina lo mejor de la gastronomía regional,
               ofreciendo platos elaborados con ingredientes frescos y de
               calidad. Desde un desayuno completo para comenzar el día con
@@ -37,7 +39,7 @@ const ServicesSection = () => {
           </div>
         </div>
         {/* Service 2 */}
-        <div className="grid mt-10 grid-cols-1 gap-5 lg:mt-0 lg:gap-0 lg:grid-cols-2 items-center">
+        <div className="grid items-center grid-cols-1 gap-5 mt-10 lg:mt-0 lg:gap-0 lg:grid-cols-2">
           {/* images */}
           <div className="order-2 h-[400px] lg:h-[500px]">
             <Image
@@ -45,18 +47,20 @@ const ServicesSection = () => {
               alt="Historia del Hotel Elegante"
               width={500}
               height={600}
-              className="h-full w-full object-cover shadow-xl intersect:animate-fade-right intersect:animate-delay-200"
+              className="object-cover w-full h-full shadow-xl intersect:animate-fade-right intersect:animate-delay-200"
+              loading="lazy"
+              quality={70}
             />
           </div>
           {/* text content */}
-          <div className="order-2 flex flex-col items-center space-y-8 text-center">
-            <h4 className="md:text-xl font-bold text-primary font-secondary uppercase">
+          <div className="flex flex-col items-center order-2 space-y-8 text-center">
+            <h4 className="font-bold uppercase md:text-xl text-primary font-secondary">
               piletas
             </h4>
             <h2 className="text-4xl md:text-5xl text-dark font-title">
               Piscina Termal
             </h2>
-            <p className="md:text-lg text-dark/70 leading-relaxed max-w-xl">
+            <p className="max-w-xl leading-relaxed md:text-lg text-dark/70">
               Sumergite en nuestra piscina de aguas termales, famosas en Termas
               de Río Hondo por sus propiedades curativas y relajantes. El agua
               mineralizada, naturalmente cálida, ayuda a mejorar la circulación,
@@ -67,7 +71,7 @@ const ServicesSection = () => {
           </div>
         </div>
         {/* Service 3 */}
-        <div className="grid mt-10 grid-cols-1 gap-5 lg:mt-0 lg:gap-0 lg:grid-cols-2 items-center">
+        <div className="grid items-center grid-cols-1 gap-5 mt-10 lg:mt-0 lg:gap-0 lg:grid-cols-2">
           {/* images */}
           <div className="order-3 h-[400px] lg:h-[500px]">
             <Image
@@ -75,18 +79,20 @@ const ServicesSection = () => {
               alt="Historia del Hotel Elegante"
               width={500}
               height={600}
-              className="h-full w-full object-cover shadow-xl intersect:animate-fade-left intersect:animate-delay-200"
+              className="object-cover w-full h-full shadow-xl intersect:animate-fade-left intersect:animate-delay-200"
+              loading="lazy"
+              quality={70}
             />
           </div>
           {/* text content */}
-          <div className="order-2 flex flex-col items-center space-y-8 text-center">
-            <h4 className="md:text-xl font-bold text-primary font-secondary uppercase">
+          <div className="flex flex-col items-center order-2 space-y-8 text-center">
+            <h4 className="font-bold uppercase md:text-xl text-primary font-secondary">
               solarium
             </h4>
             <h2 className="text-4xl md:text-5xl text-dark font-title">
               Patio & Solárium
             </h2>
-            <p className="md:text-lg text-dark/70 leading-relaxed max-w-xl">
+            <p className="max-w-xl leading-relaxed md:text-lg text-dark/70">
               Disfrutá de un espacio al aire libre pensado para el descanso y el
               placer. Nuestro patio con solárium te invita a relajarte bajo el
               sol, compartir momentos tranquilos en un entorno acogedor o

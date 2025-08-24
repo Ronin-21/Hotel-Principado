@@ -113,7 +113,7 @@ const RoomsGallery = () => {
   return (
     <div className="w-full md:w-[1200px] md:h-[800px] flex flex-col md:flex-row items-start justify-between mx-auto intersect:animate-fade-down intersect:animate-delay-200">
       {/* Barra lateral */}
-      <div className="flex flex-col items-center w-full md:w-1/4 md:h-96 md:p-0 px-4 shadow-lg shadow-dark/30 font-secondary">
+      <div className="flex flex-col items-center w-full px-4 shadow-lg md:w-1/4 md:h-96 md:p-0 shadow-dark/30 font-secondary">
         {tabs.map((tab) => (
           <button
             key={tab.key}
@@ -127,18 +127,25 @@ const RoomsGallery = () => {
         ))}
       </div>
       {/* Contenido */}
-      <div className="flex flex-col items-center justify-between w-full h-full px-4 md:px-0 bg-white shadow-lg shadow-dark/30">
+      <div className="flex flex-col items-center justify-between w-full h-full px-4 bg-white shadow-lg md:px-0 shadow-dark/30">
         {/* Imagenes */}
         {rooms[activeTab].map((room, index) => (
           <div
             key={index}
-            className="relative w-full md:min-h-96 h-80 shadow-lg shadow-dark/10"
+            className="relative w-full shadow-lg md:min-h-96 h-80 shadow-dark/10"
           >
-            <Image alt="img" src={room.image} fill className="object-cover" />
+            <Image
+              alt="img"
+              src={room.image}
+              fill
+              className="object-cover"
+              loading="lazy"
+              quality={70}
+            />
           </div>
         ))}
         {/* Descripcion */}
-        <div className="flex flex-col items-start justify-start gap-3 w-full h-full p-5">
+        <div className="flex flex-col items-start justify-start w-full h-full gap-3 p-5">
           {/* Tabs */}
           <div className="flex items-center gap-5 font-secondary">
             <h3
@@ -170,7 +177,7 @@ const RoomsGallery = () => {
           {rooms[activeTab].map((room, index) => (
             <p
               key={index}
-              className="md:max-w-3xl w-full text-center md:text-left text-dark/75 "
+              className="w-full text-center md:max-w-3xl md:text-left text-dark/75 "
             >
               {room.estandar.label === activeRoom ? (
                 <>{room.estandar.description}</>
@@ -183,14 +190,14 @@ const RoomsGallery = () => {
         {/* Caracteristicas y Precio */}
         <div className="w-full flex h-[250px] items-center justify-between border-t-2 border-dark/10">
           {/* Comodidades */}
-          <div className="border-r-2 border-dark/10 h-full md:w-3/5 md:px-6 px-4 py-6">
+          <div className="h-full px-4 py-6 border-r-2 border-dark/10 md:w-3/5 md:px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-3">
               {features?.slice(0, 4).map((feature, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-2 text-dark text-lg font-secondary"
+                  className="flex items-center gap-2 text-lg text-dark font-secondary"
                 >
-                  <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
+                  <Check className="flex-shrink-0 w-5 h-5 text-green-500" />
                   <span className="truncate">{feature}</span>
                 </div>
               ))}
@@ -200,12 +207,12 @@ const RoomsGallery = () => {
           {rooms[activeTab].map((room, index) => (
             <div
               key={index}
-              className="md:w-2/5 h-full p-5 flex flex-col items-center text-center gap-5"
+              className="flex flex-col items-center h-full gap-5 p-5 text-center md:w-2/5"
             >
               {room.estandar.label === activeRoom ? (
                 <>
                   <div>
-                    <p className="font-semibold text-xl font-secondary">
+                    <p className="text-xl font-semibold font-secondary">
                       Desayuno
                     </p>
                     <div className="text-2xl font-bold">
@@ -216,7 +223,7 @@ const RoomsGallery = () => {
                     </div>
                   </div>
                   <div>
-                    <p className="font-semibold text-xl font-secondary">
+                    <p className="text-xl font-semibold font-secondary">
                       Media Pensión
                     </p>
                     <div className="text-2xl font-bold">
@@ -230,7 +237,7 @@ const RoomsGallery = () => {
               ) : (
                 <>
                   <div>
-                    <p className="font-semibold text-xl font-secondary">
+                    <p className="text-xl font-semibold font-secondary">
                       Desayuno
                     </p>
                     <div className="text-2xl font-bold">
@@ -241,7 +248,7 @@ const RoomsGallery = () => {
                     </div>
                   </div>
                   <div>
-                    <p className="font-semibold text-xl font-secondary">
+                    <p className="text-xl font-semibold font-secondary">
                       Media Pensión
                     </p>
                     <div className="text-2xl font-bold">

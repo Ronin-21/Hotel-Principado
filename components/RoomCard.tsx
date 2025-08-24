@@ -23,17 +23,19 @@ export function RoomCard({
           alt={title}
           fill
           className="object-cover"
+          loading="lazy"
+          quality={70}
         />
       </div>
       <div className="p-6">
-        <h3 className="text-2xl font-semibold mb-2 font-secondary">{title}</h3>
-        <p className="text-dark/60 mb-4 line-clamp-2">{description}</p>
+        <h3 className="mb-2 text-2xl font-semibold font-secondary">{title}</h3>
+        <p className="mb-4 text-dark/60 line-clamp-2">{description}</p>
 
         <div className="mb-4">
-          <div className="grid grid-cols-2 gap-x-2 gap-y-1 font-secondary text-xl">
+          <div className="grid grid-cols-2 text-xl gap-x-2 gap-y-1 font-secondary">
             {features.slice(0, 4).map((feature, index) => (
-              <div key={index} className="flex items-center text-sm gap-1">
-                <Check className="h-4 w-4 text-green-500 flex-shrink-0" />
+              <div key={index} className="flex items-center gap-1 text-sm">
+                <Check className="flex-shrink-0 w-4 h-4 text-green-500" />
                 <span className="truncate">{feature}</span>
               </div>
             ))}

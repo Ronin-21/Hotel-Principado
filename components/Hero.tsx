@@ -1,10 +1,26 @@
+import Image from "next/image";
+
 const Hero = () => {
   return (
     <section
       id="inicio"
-      className="relative min-h-dvh bg-cover bg-center bg-[url('/outside-5.webp')] flex items-center justify-center overflow-hidden"
+      className="relative flex items-center justify-center overflow-hidden min-h-dvh"
     >
-      <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 text-shadow-md text-shadow-dark/50">
+      {/* Imagen de fondo optimizada */}
+      <Image
+        src="/outside-5.webp"
+        alt="Vista exterior del Grand Hotel Principado"
+        fill
+        priority
+        quality={75}
+        className="object-cover"
+      />
+
+      {/* Overlay */}
+      <div className="absolute inset-0 z-0 bg-black/60" />
+
+      {/* Contenido */}
+      <div className="relative z-10 max-w-5xl px-4 mx-auto text-center text-white text-shadow-md text-shadow-dark/50">
         <h1 className="text-5xl md:text-8xl mb-6 font-semibold font-hero animate-fade-down animate-once animate-duration-[3000ms]">
           Tu escapada ideal comienza aquí
         </h1>
@@ -12,8 +28,6 @@ const Hero = () => {
           Confort, gastronomía y relax termal en pleno centro de Termas
         </h2>
       </div>
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/60" />
     </section>
   );
 };

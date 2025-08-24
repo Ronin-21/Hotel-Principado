@@ -3,9 +3,9 @@ import MyButton from "./MyButton";
 
 const WelcomeSection = () => {
   return (
-    <section className="bg-light flex items-center justify-center py-20">
+    <section className="flex items-center justify-center py-20 bg-light">
       <div className="container px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
           {/* images */}
           <div className="order-1 flex justify-center relative h-[300px] md:h-[400px]">
             <Image
@@ -14,6 +14,8 @@ const WelcomeSection = () => {
               width={600}
               height={600}
               className="object-cover h-[300px] md:h-[400px] absolute bottom-0 rounded-lg shadow-lg intersect:animate-fade-left intersect:animate-delay-200"
+              loading="lazy"
+              quality={70}
             />
             <Image
               src="/lobby-3.webp"
@@ -21,18 +23,20 @@ const WelcomeSection = () => {
               width={300}
               height={400}
               className="absolute h-[250px] md:h-[300px] object-cover md:-bottom-16 md:-left-12 -bottom-5 ring-[10px] ring-light intersect:animate-fade-right intersect:animate-delay-200"
+              loading="lazy"
+              quality={70}
             />
           </div>
           {/* text content */}
-          <div className="order-2 flex flex-col items-start space-y-6">
-            <h4 className="md:text-xl font-semibold text-primary font-secondary uppercase">
+          <div className="flex flex-col items-start order-2 space-y-6">
+            <h4 className="font-semibold uppercase md:text-xl text-primary font-secondary">
               Tradición, confort y hospitalidad
             </h4>
-            <h2 className="text-5xl md:text-6xl font-title text-center md:text-left">
+            <h2 className="text-5xl text-center md:text-6xl font-title md:text-left">
               Bienvenidos al Grand Hotel Principado
             </h2>
-            <div className="space-y-6 text-dark/70 leading-relaxed">
-              <p className="md:text-lg text-center md:text-left">
+            <div className="space-y-6 leading-relaxed text-dark/70">
+              <p className="text-center md:text-lg md:text-left">
                 En el corazón de la ciudad, te esperamos con la calidez que nos
                 caracteriza, servicios de primer nivel y el inconfundible relax
                 de las aguas termales. Aquí comienza tu experiencia de confort y

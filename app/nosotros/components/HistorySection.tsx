@@ -2,17 +2,17 @@ import Image from "next/image";
 
 const HistorySection = () => {
   return (
-    <section className="md:py-40 py-20 bg-gray-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+    <section className="py-20 md:py-40 bg-gray-50">
+      <div className="container px-4 mx-auto sm:px-6 lg:px-8">
+        <div className="grid items-center grid-cols-1 gap-20 lg:grid-cols-2">
           <div className="order-1">
             <h2 className="text-5xl md:text-6xl font-title">
               Nuestra Historia
             </h2>
-            <h4 className="md:text-xl text-lg font-semibold text-primary font-secondary mb-10 mt-3">
+            <h4 className="mt-3 mb-10 text-lg font-semibold md:text-xl text-primary font-secondary">
               Tradición y hospitalidad en cada detalle
             </h4>
-            <div className="space-y-6 text-dark/60 leading-relaxed">
+            <div className="space-y-6 leading-relaxed text-dark/60">
               <p>
                 El Hotel Principado nació con una visión clara: ofrecer a cada
                 viajero un espacio donde el confort se encuentre con la
@@ -40,38 +40,40 @@ const HistorySection = () => {
                 volver.
               </p>
             </div>
-            <div className="mt-8 grid grid-cols-3 gap-8 text-center font-secondary">
+            <div className="grid grid-cols-3 gap-8 mt-8 text-center font-secondary">
               <div>
-                <div className="text-3xl font-light text-primary mb-2">60+</div>
-                <div className="text-dark/60 font-semibold">
+                <div className="mb-2 text-3xl font-light text-primary">60+</div>
+                <div className="font-semibold text-dark/60">
                   Años de Historia
                 </div>
               </div>
               <div>
-                <div className="text-3xl font-light text-primary mb-2">
+                <div className="mb-2 text-3xl font-light text-primary">
                   50k+
                 </div>
-                <div className="text-dark/60 font-semibold">
+                <div className="font-semibold text-dark/60">
                   Huéspedes Satisfechos
                 </div>
               </div>
               <div>
-                <div className="text-3xl font-light text-primary mb-2">80+</div>
-                <div className="text-dark/60 font-semibold">Habitaciones</div>
+                <div className="mb-2 text-3xl font-light text-primary">80+</div>
+                <div className="font-semibold text-dark/60">Habitaciones</div>
               </div>
             </div>
           </div>
           {/* Images */}
-          <div className="order-2 relative w-full">
+          <div className="relative order-2 w-full">
             <Image
               src="/pool.webp"
               alt="Historia del Hotel Elegante"
               width={600}
               height={600}
               className="rounded-lg shadow-lg intersect:animate-fade-down intersect:animate-delay-200"
+              loading="lazy"
+              quality={70}
             />
-            <div className="absolute -bottom-6 md:-left-6 left-0 w-32 h-32 bg-primary/30 rounded-lg intersect:animate-fade-right intersect:animate-delay-200" />
-            <div className="absolute -top-6 md:-right-6 right-0 w-24 h-24 bg-primary/30 rounded-lg intersect:animate-fade-left intersect:animate-delay-200" />
+            <div className="absolute left-0 w-32 h-32 rounded-lg -bottom-6 md:-left-6 bg-primary/30 intersect:animate-fade-right intersect:animate-delay-200" />
+            <div className="absolute right-0 w-24 h-24 rounded-lg -top-6 md:-right-6 bg-primary/30 intersect:animate-fade-left intersect:animate-delay-200" />
           </div>
         </div>
       </div>

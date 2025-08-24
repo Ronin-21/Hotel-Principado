@@ -56,9 +56,9 @@ const GalleryGrid = () => {
   const [activeTab, setActiveTab] = useState<TabKey>("habitaciones");
 
   return (
-    <div className="max-w-7xl mx-auto md:mt-10 mt-5">
+    <div className="mx-auto mt-5 max-w-7xl md:mt-10">
       {/* Botones de pestañas */}
-      <div className="grid grid-cols-4 gap-2 mb-8 bg-white rounded-lg shadow-md overflow-hidden">
+      <div className="grid grid-cols-4 gap-2 mb-8 overflow-hidden bg-white rounded-lg shadow-md">
         {tabs.map((tab) => (
           <button
             key={tab.key}
@@ -79,14 +79,16 @@ const GalleryGrid = () => {
         {images[activeTab].map((src, index) => (
           <div
             key={index}
-            className="overflow-hidden rounded-lg h-80 shadow-md shadow-dark/50"
+            className="overflow-hidden rounded-lg shadow-md h-80 shadow-dark/50"
           >
             <Image
-              src={`${src}?height=400&width=600`}
+              src={src}
               alt={"Imagen de " + activeTab}
               width={600}
               height={400}
-              className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+              className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
+              loading="lazy"
+              quality={70}
             />
           </div>
         ))}

@@ -8,28 +8,30 @@ import "./globals.css";
 const arsenica = localFont({
   src: "../public/Arsenica-Medium.woff2",
   variable: "--font-arsenica",
+  weight: "500",
   display: "swap",
+  preload: true,
 });
 
 const karla = Karla({
   variable: "--font-karla",
   weight: ["400", "600", "700"],
+  subsets: ["latin", "latin-ext"],
   display: "swap",
-  subsets: ["latin", "latin-ext"], // Aquí puedes agregar los subconjuntos que necesites
-  preload: true, // Asegúrate de que esté habilitado si lo deseas
+  preload: true,
 });
 
 const martel = Martel({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
   variable: "--font-martel",
+  weight: ["400", "600", "700"],
+  subsets: ["latin", "latin-ext"],
   display: "swap",
 });
 
 const greatVibes = Great_Vibes({
-  subsets: ["latin"],
-  weight: ["400"],
   variable: "--font-great-vibes",
+  weight: ["400"],
+  subsets: ["latin", "latin-ext"],
   display: "swap",
 });
 
@@ -50,21 +52,33 @@ export const metadata: Metadata = {
     "hotel céntrico Termas",
     "spa y restaurante hotel",
   ],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     type: "website",
     url: "https://www.grandhotelprincipado.com",
     title: "Grand Hotel Principado | Hotel 4 Estrellas en Termas",
     description:
       "Descubre el Grand Hotel Principado en Termas. Habitaciones elegantes, spa, restaurante gourmet y la mejor ubicación para tu estadía.",
+    siteName: "Grand Hotel Principado",
     images: [
       {
         url: "/portada.webp",
         width: 1200,
         height: 630,
         alt: "Grand Hotel Principado - Fachada y entrada principal",
+        type: "image/webp",
       },
     ],
-    siteName: "Grand Hotel Principado",
   },
   twitter: {
     card: "summary_large_image",
@@ -76,6 +90,16 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.grandhotelprincipado.com",
   },
+  authors: [
+    {
+      name: "Grand Hotel Principado",
+      url: "https://www.grandhotelprincipado.com",
+    },
+    {
+      name: "Abel Acuña – Freelancer Frontend",
+      url: "https://ronin-webdesign.vercel.app/",
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -91,10 +115,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
-        <script
-          defer
-          src="https://unpkg.com/tailwindcss-intersect@2.x.x/dist/observer.min.js"
-        ></script>
+        <script src="https://unpkg.com/tailwindcss-intersect@2.x.x/dist/observer.min.js"></script>
       </body>
     </html>
   );
