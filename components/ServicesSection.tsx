@@ -1,4 +1,5 @@
 import Image from "next/image";
+import FadeComponent from "./animations/FadeComponent";
 
 const ServicesSection = () => {
   return (
@@ -10,17 +11,23 @@ const ServicesSection = () => {
         {/* Service 1 */}
         <div className="grid items-center grid-cols-1 gap-5 mt-10 lg:mt-0 lg:gap-0 lg:grid-cols-2">
           {/* images */}
-          <div className="order-2 h-[400px] lg:h-[500px]">
+          <FadeComponent
+            direction="right"
+            duration={1500}
+            delay={500}
+            triggerOnce={false}
+            className="order-2 h-[400px] lg:h-[500px]"
+          >
             <Image
               src="/bar-4.webp"
               alt="Historia del Hotel Elegante"
               width={500}
               height={600}
-              className="object-cover w-full h-full shadow-xl intersect:animate-fade-left intersect:animate-delay-200"
+              className="object-cover w-full h-full shadow-xl"
               loading="lazy"
               quality={70}
             />
-          </div>
+          </FadeComponent>
           {/* text content */}
           <div className="flex flex-col items-center order-1 space-y-8 text-center">
             <h4 className="font-bold uppercase md:text-xl text-primary font-secondary">
@@ -41,17 +48,23 @@ const ServicesSection = () => {
         {/* Service 2 */}
         <div className="grid items-center grid-cols-1 gap-5 mt-10 lg:mt-0 lg:gap-0 lg:grid-cols-2">
           {/* images */}
-          <div className="order-2 h-[400px] lg:h-[500px]">
+          <FadeComponent
+            direction="left"
+            duration={1500}
+            delay={500}
+            triggerOnce={false}
+            className="order-2 h-[400px] lg:h-[500px]"
+          >
             <Image
               src="/pool-4.webp"
               alt="Historia del Hotel Elegante"
               width={500}
               height={600}
-              className="object-cover w-full h-full shadow-xl intersect:animate-fade-right intersect:animate-delay-200"
+              className="object-cover w-full h-full shadow-xl"
               loading="lazy"
               quality={70}
             />
-          </div>
+          </FadeComponent>
           {/* text content */}
           <div className="flex flex-col items-center order-2 space-y-8 text-center">
             <h4 className="font-bold uppercase md:text-xl text-primary font-secondary">
@@ -73,17 +86,23 @@ const ServicesSection = () => {
         {/* Service 3 */}
         <div className="grid items-center grid-cols-1 gap-5 mt-10 lg:mt-0 lg:gap-0 lg:grid-cols-2">
           {/* images */}
-          <div className="order-3 h-[400px] lg:h-[500px]">
+          <FadeComponent
+            direction="right"
+            duration={1500}
+            delay={500}
+            triggerOnce={false}
+            className="order-3 h-[400px] lg:h-[500px]"
+          >
             <Image
               src="/outside-3.webp"
               alt="Historia del Hotel Elegante"
               width={500}
               height={600}
-              className="object-cover w-full h-full shadow-xl intersect:animate-fade-left intersect:animate-delay-200"
+              className="object-cover w-full h-full shadow-xl"
               loading="lazy"
               quality={70}
             />
-          </div>
+          </FadeComponent>
           {/* text content */}
           <div className="flex flex-col items-center order-2 space-y-8 text-center">
             <h4 className="font-bold uppercase md:text-xl text-primary font-secondary">

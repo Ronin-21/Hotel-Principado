@@ -1,25 +1,27 @@
+import FadeComponent from "./animations/FadeComponent";
+
 const LocationSection = () => {
   return (
     <section id="ubicacion" className="py-20 bg-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl text-dark mb-4 font-title">
+      <div className="container px-4 mx-auto sm:px-6 lg:px-8">
+        <div className="mb-16 text-center">
+          <h2 className="mb-4 text-4xl md:text-6xl text-dark font-title">
             Dónde Encontrarnos
           </h2>
-          <p className="md:text-xl text-lg text-dark/60 max-w-3xl mx-auto">
+          <p className="max-w-3xl mx-auto text-lg md:text-xl text-dark/60">
             Ubicado en el corazón de Termas de Río Hondo, el Hotel Principado
             combina comodidad y cercanía. Desde aquí podrás acceder fácilmente a
             las principales atracciones turísticas
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
           <div className="space-y-6">
             <div>
-              <h3 className="text-2xl text-dark mb-4 font-secondary font-semibold">
+              <h3 className="mb-4 text-2xl font-semibold text-dark font-secondary">
                 Dirección
               </h3>
-              <p className="text-dark/70 text-lg">
+              <p className="text-lg text-dark/70">
                 Av. Manuel Belgrano 345
                 <br />
                 Las Termas de Río Hondo
@@ -29,7 +31,7 @@ const LocationSection = () => {
             </div>
 
             <div>
-              <h3 className="text-2xl text-dark mb-4 font-secondary font-semibold">
+              <h3 className="mb-4 text-2xl font-semibold text-dark font-secondary">
                 Puntos de Interés Cercanos
               </h3>
               <ul className="space-y-2 text-dark/70">
@@ -53,7 +55,7 @@ const LocationSection = () => {
             </div>
 
             <div>
-              <h3 className="text-2xl text-dark mb-4 font-secondary font-semibold">
+              <h3 className="mb-4 text-2xl font-semibold text-dark font-secondary">
                 Transporte
               </h3>
               <p className="text-dark/70">
@@ -63,7 +65,12 @@ const LocationSection = () => {
             </div>
           </div>
 
-          <div className="relative h-96 lg:h-full min-h-[400px] rounded-lg overflow-hidden shadow-lg intersect:animate-fade-left intersect:animate-delay-200">
+          <FadeComponent
+            direction="right"
+            duration={1500}
+            delay={500}
+            className="relative h-96 lg:h-full min-h-[400px] rounded-lg overflow-hidden shadow-lg"
+          >
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3539.0669619783175!2d-64.86692582454!3d-27.498292876303015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94236e63f640ac47%3A0x4772044e8cad2ca4!2sPrincipado!5e0!3m2!1ses!2sar!4v1755297893699!5m2!1ses!2sar"
               width="100%"
@@ -74,7 +81,7 @@ const LocationSection = () => {
               referrerPolicy="no-referrer-when-downgrade"
               title="Ubicación Hotel Principado"
             />
-          </div>
+          </FadeComponent>
         </div>
       </div>
     </section>

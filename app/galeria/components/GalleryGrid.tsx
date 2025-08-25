@@ -1,5 +1,6 @@
 "use client";
 
+import ZoomComponent from "@/components/animations/ZoomComponent";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -76,22 +77,24 @@ const GalleryGrid = () => {
       </div>
       {/* Contenido de cada pestaña */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
-        {images[activeTab].map((src, index) => (
-          <div
-            key={index}
-            className="overflow-hidden rounded-lg shadow-md h-80 shadow-dark/50"
-          >
-            <Image
-              src={src}
-              alt={"Imagen de " + activeTab}
-              width={600}
-              height={400}
-              className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
-              loading="lazy"
-              quality={70}
-            />
-          </div>
-        ))}
+        <ZoomComponent cascade={true} damping={0.2}>
+          {images[activeTab].map((src, index) => (
+            <div
+              key={index}
+              className="overflow-hidden rounded-lg shadow-md h-80 shadow-dark/50"
+            >
+              <Image
+                src={src}
+                alt={"Imagen de " + activeTab}
+                width={600}
+                height={400}
+                className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
+                loading="lazy"
+                quality={70}
+              />
+            </div>
+          ))}
+        </ZoomComponent>
       </div>
     </div>
   );

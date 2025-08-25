@@ -1,3 +1,4 @@
+import ZoomComponent from "./animations/ZoomComponent";
 import { RoomCard } from "./RoomCard";
 
 const packages = [
@@ -51,26 +52,28 @@ const packages = [
 const PackagesSection = () => {
   return (
     <section id="paquetes" className="py-20 bg-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl text-dark mb-4 font-title">
+      <div className="container px-4 mx-auto sm:px-6 lg:px-8">
+        <div className="mb-16 text-center">
+          <h2 className="mb-4 text-4xl md:text-6xl text-dark font-title">
             Paquetes a tu medida
           </h2>
-          <p className="md:text-xl text-lg text-dark/60 max-w-2xl mx-auto">
+          <p className="max-w-2xl mx-auto text-lg md:text-xl text-dark/60">
             Elegí el régimen que mejor se adapte a tu estadía y disfrutá de la
             mejor gastronomía en un entorno de confort y hospitalidad
           </p>
         </div>
-        <div className="container flex flex-col md:flex-row gap-10 items-center justify-evenly mx-auto">
-          {packages.map((pkg, index) => (
-            <RoomCard
-              key={index}
-              description={pkg.description}
-              features={pkg.features}
-              title={pkg.title}
-              image={pkg.image}
-            />
-          ))}
+        <div className="container flex flex-col items-center gap-10 mx-auto md:flex-row justify-evenly">
+          <ZoomComponent cascade={true} damping={0.2}>
+            {packages.map((pkg, index) => (
+              <RoomCard
+                key={index}
+                description={pkg.description}
+                features={pkg.features}
+                title={pkg.title}
+                image={pkg.image}
+              />
+            ))}
+          </ZoomComponent>
         </div>
       </div>
     </section>

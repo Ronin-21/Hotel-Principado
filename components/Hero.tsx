@@ -1,4 +1,5 @@
 import Image from "next/image";
+import FadeComponent from "./animations/FadeComponent";
 
 const Hero = () => {
   return (
@@ -20,13 +21,20 @@ const Hero = () => {
       <div className="absolute inset-0 z-0 bg-black/60" />
 
       {/* Contenido */}
-      <div className="relative z-10 max-w-5xl px-4 mx-auto text-center text-white text-shadow-md text-shadow-dark/50">
-        <h1 className="text-5xl md:text-8xl mb-6 font-semibold font-hero animate-fade-down animate-once animate-duration-[3000ms]">
-          Tu escapada ideal comienza aquí
-        </h1>
-        <h2 className="text-xl md:text-3xl max-w-3xl mx-auto leading-relaxed italic font-secondary text-primary font-semibold animate-fade-down animate-once animate-duration-[2000ms]">
-          Confort, gastronomía y relax termal en pleno centro de Termas
-        </h2>
+      <div>
+        <FadeComponent
+          cascade={true}
+          damping={0.2}
+          direction="down"
+          className="max-w-5xl px-4 mx-auto text-center text-white text-shadow-md text-shadow-dark/50"
+        >
+          <h1 className="mb-6 text-5xl font-semibold md:text-8xl font-hero">
+            Tu escapada ideal comienza aquí
+          </h1>
+          <h2 className="max-w-3xl mx-auto text-xl italic font-semibold leading-relaxed md:text-3xl font-secondary text-primary">
+            Confort, gastronomía y relax termal en pleno centro de Termas
+          </h2>
+        </FadeComponent>
       </div>
     </section>
   );

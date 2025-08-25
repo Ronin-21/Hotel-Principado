@@ -1,4 +1,5 @@
 import Image from "next/image";
+import FadeComponent from "./animations/FadeComponent";
 
 const BannerSection = () => {
   return (
@@ -15,9 +16,12 @@ const BannerSection = () => {
 
       {/* Overlay oscuro */}
       <div className="absolute inset-0 flex flex-col items-center justify-center gap-24 bg-black/60">
-        <h3 className="max-w-5xl text-4xl italic font-semibold text-center text-white xl:text-4xl font-secondary leading-14 intersect:animate-fade intersect:animate-delay-300">
-          ¡Descubrí un espacio pensado para el descanso, el bienestar y confort!
-        </h3>
+        <FadeComponent direction="up" duration={1500} delay={500}>
+          <h3 className="max-w-5xl text-4xl italic font-semibold text-center text-white xl:text-4xl font-secondary leading-14">
+            ¡Descubrí un espacio pensado para el descanso, el bienestar y
+            confort!
+          </h3>
+        </FadeComponent>
       </div>
     </div>
   );

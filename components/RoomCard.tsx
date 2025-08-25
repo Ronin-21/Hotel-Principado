@@ -16,7 +16,7 @@ export function RoomCard({
   features,
 }: RoomCardProps) {
   return (
-    <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow w-[350px] intersect:animate-fade-down intersect:animate-delay-300">
+    <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow w-[350px]">
       <div className="relative h-48">
         <Image
           src={image || "/default-image.jpg"}

@@ -110,12 +110,11 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${arsenica.variable} ${karla.variable} ${martel.variable} ${greatVibes.variable} antialiased min-h-screen bg-white`}
+        className={`${arsenica.variable} ${karla.variable} ${martel.variable} ${greatVibes.variable} antialiased min-h-screen bg-white overflow-x-hidden`}
       >
         <Navbar />
         {children}
         <Footer />
-        <script src="https://unpkg.com/tailwindcss-intersect@2.x.x/dist/observer.min.js"></script>
       </body>
     </html>
   );

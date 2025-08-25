@@ -1,6 +1,4 @@
 @import "tailwindcss";
-@import "tailwindcss-animated";
-@import "tailwindcss-intersect";
 
 @theme {
   --color-primary: #d8a47f;

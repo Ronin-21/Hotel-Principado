@@ -1,3 +1,4 @@
+import FadeComponent from "@/components/animations/FadeComponent";
 import Image from "next/image";
 
 const HistorySection = () => {
@@ -63,17 +64,41 @@ const HistorySection = () => {
           </div>
           {/* Images */}
           <div className="relative order-2 w-full">
-            <Image
-              src="/pool.webp"
-              alt="Historia del Hotel Elegante"
-              width={600}
-              height={600}
-              className="rounded-lg shadow-lg intersect:animate-fade-down intersect:animate-delay-200"
-              loading="lazy"
-              quality={70}
-            />
-            <div className="absolute left-0 w-32 h-32 rounded-lg -bottom-6 md:-left-6 bg-primary/30 intersect:animate-fade-right intersect:animate-delay-200" />
-            <div className="absolute right-0 w-24 h-24 rounded-lg -top-6 md:-right-6 bg-primary/30 intersect:animate-fade-left intersect:animate-delay-200" />
+            <FadeComponent
+              className="relative w-full md:w-[600px] overflow-hidden h-[400px] md:h-[600px] rounded-lg shadow-lg shadow-dark/50"
+              direction="down"
+              duration={1500}
+              triggerOnce={false}
+            >
+              <Image
+                src="/pool.webp"
+                alt="Historia del Hotel Elegante"
+                fill
+                className="object-cover"
+                loading="lazy"
+                quality={70}
+              />
+            </FadeComponent>
+
+            <FadeComponent
+              direction="left"
+              duration={1500}
+              delay={500}
+              triggerOnce={false}
+              className="absolute left-0 w-32 h-32 rounded-lg -bottom-6 md:-left-6 bg-primary/30"
+            >
+              <div />
+            </FadeComponent>
+
+            <FadeComponent
+              direction="right"
+              duration={1500}
+              delay={500}
+              triggerOnce={false}
+              className="absolute right-0 w-24 h-24 rounded-lg -top-6 md:-right-6 bg-primary/30"
+            >
+              <div />
+            </FadeComponent>
           </div>
         </div>
       </div>

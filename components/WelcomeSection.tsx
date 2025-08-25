@@ -1,5 +1,6 @@
 import Image from "next/image";
 import MyButton from "./MyButton";
+import FadeComponent from "./animations/FadeComponent";
 
 const WelcomeSection = () => {
   return (
@@ -8,24 +9,38 @@ const WelcomeSection = () => {
         <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
           {/* images */}
           <div className="order-1 flex justify-center relative h-[300px] md:h-[400px]">
-            <Image
-              src={"/pool-1.webp"}
-              alt="Historia del Hotel Elegante"
-              width={600}
-              height={600}
-              className="object-cover h-[300px] md:h-[400px] absolute bottom-0 rounded-lg shadow-lg intersect:animate-fade-left intersect:animate-delay-200"
-              loading="lazy"
-              quality={70}
-            />
-            <Image
-              src="/lobby-3.webp"
-              alt="Historia del Hotel Elegante"
-              width={300}
-              height={400}
-              className="absolute h-[250px] md:h-[300px] object-cover md:-bottom-16 md:-left-12 -bottom-5 ring-[10px] ring-light intersect:animate-fade-right intersect:animate-delay-200"
-              loading="lazy"
-              quality={70}
-            />
+            <FadeComponent
+              direction="right"
+              duration={1500}
+              delay={500}
+              triggerOnce={false}
+              className="h-[300px] md:h-[400px] w-full md:w-[600px] absolute bottom-0 rounded-lg shadow-lg shadow-dark/50 overflow-hidden"
+            >
+              <Image
+                src={"/pool-1.webp"}
+                alt="Historia del Hotel Elegante"
+                fill
+                className="object-cover"
+                loading="lazy"
+                quality={70}
+              />
+            </FadeComponent>
+            <FadeComponent
+              direction="left"
+              duration={1500}
+              delay={500}
+              triggerOnce={false}
+              className="absolute h-[250px] md:h-[300px] md:-bottom-16 md:-left-12 -bottom-5 ring-[10px] ring-light w-[300px]"
+            >
+              <Image
+                src="/lobby-3.webp"
+                alt="Historia del Hotel Elegante"
+                fill
+                className="object-cover"
+                loading="lazy"
+                quality={70}
+              />
+            </FadeComponent>
           </div>
           {/* text content */}
           <div className="flex flex-col items-start order-2 space-y-6">

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import MyButton from "./MyButton";
+import FadeComponent from "./animations/FadeComponent";
 
 const images = [
   { src: "/room-4.webp", alt: "Habitaciones" },
@@ -25,27 +26,27 @@ const GallerySection = () => {
         </div>
 
         <div className="grid grid-cols-1 gap-6 px-4 md:grid-cols-2 lg:grid-cols-3 md:px-0">
-          {images.map((image, index) => (
-            <div
-              key={index}
-              className={`group relative overflow-hidden rounded-lg aspect-[4/3] intersect:animate-fade-down intersect:animate-delay-${
-                index + 1
-              }00`}
-            >
-              <Image
-                src={image.src || "/default-image.jpg"}
-                alt={image.alt}
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-110"
-                loading="lazy"
-                quality={70}
-              />
-              <div className="absolute inset-0 transition-opacity duration-300 opacity-0 bg-black/20 group-hover:opacity-100" />
-              <div className="absolute text-white transition-opacity duration-300 opacity-0 bottom-4 left-4 group-hover:opacity-100">
-                <p className="text-lg font-medium">{image.alt}</p>
+          <FadeComponent cascade={true} damping={0.2} direction="down">
+            {images.map((image, index) => (
+              <div
+                key={index}
+                className="group relative overflow-hidden rounded-lg aspect-[4/3]"
+              >
+                <Image
+                  src={image.src || "/default-image.jpg"}
+                  alt={image.alt}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
+                  quality={70}
+                />
+                <div className="absolute inset-0 transition-opacity duration-300 opacity-0 bg-black/20 group-hover:opacity-100" />
+                <div className="absolute text-white transition-opacity duration-300 opacity-0 bottom-4 left-4 group-hover:opacity-100">
+                  <p className="text-lg font-medium">{image.alt}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </FadeComponent>
         </div>
         <MyButton className="self-center" href="/galeria">
           Ver más
