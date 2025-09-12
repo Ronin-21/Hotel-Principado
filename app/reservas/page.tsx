@@ -7,15 +7,15 @@ export default function ReservationsPage() {
       <PagesHero bgUrl="/lobby-5.webp" />
 
       {/* Rooms Section */}
-      <section className="pt-20 pb-40 px-4 bg-light">
-        <div className="mb-20 gap-5 text-center flex flex-col items-center">
+      <section className="px-4 pt-20 pb-40 bg-light">
+        <div className="flex flex-col items-center gap-5 mb-20 text-center">
           <h2 className="text-5xl md:text-6xl font-title">
             Reservá tu estadía
           </h2>
-          <h4 className="md:text-xl text-lg font-semibold text-primary font-secondary">
+          <h4 className="text-lg font-semibold md:text-xl text-primary font-secondary">
             Tu próxima experiencia en Termas comienza aquí
           </h4>
-          <p className="md:text-lg text-dark/60 max-w-3xl md:mt-5">
+          <p className="max-w-3xl md:text-lg text-dark/60 md:mt-5">
             Con pocos clics asegurá tu lugar en el Hotel Principado. Elegí tu
             habitación, seleccioná el régimen de comidas que prefieras y
             disfrutá del confort que merecés. Nuestro sistema de reservas es
@@ -23,9 +23,9 @@ export default function ReservationsPage() {
           </p>
         </div>
         <div className="w-full md:mt-10 mx-auto max-w-[1200px] h-auto">
-          <div className="w-full rounded-xl overflow-hidden shadow-lg">
+          <div className="w-full overflow-hidden shadow-lg rounded-xl">
             <iframe
-              src="https://wubook.net/nneb/bk?f=today&n=1&ep=07b058c3&o=1.0.0.0"
+              src="https://wubook.net/nneb/bk/?ep=e610980a&lang=es&c=ARS&f=05%2F09%2F2025&t=06%2F09%2F2025&o=2.0.0.0 "
               title="Motor de reservas"
               className="w-full h-[600px] sm:h-[700px] md:h-[800px] border-0"
               loading="lazy"
@@ -35,9 +35,9 @@ export default function ReservationsPage() {
       </section>
 
       {/* Policies Section */}
-      <section className="md:py-40 py-20 px-4 md:px-6">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-5xl md:text-6xl text-center mb-12 font-title">
+      <section className="px-4 py-20 md:py-40 md:px-6">
+        <div className="container max-w-4xl mx-auto">
+          <h2 className="mb-12 text-5xl text-center md:text-6xl font-title">
             Políticas de Reserva
           </h2>
           <div className="space-y-8">

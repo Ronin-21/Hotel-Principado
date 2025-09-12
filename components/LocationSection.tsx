@@ -53,16 +53,6 @@ const LocationSection = () => {
                 </li>
               </ul>
             </div>
-
-            <div>
-              <h3 className="mb-4 text-2xl font-semibold text-dark font-secondary">
-                Transporte
-              </h3>
-              <p className="text-dark/70">
-                Servicio de traslado gratuito desde el aeropuerto.
-                Estacionamiento privado disponible para huéspedes.
-              </p>
-            </div>
           </div>
 
           <FadeComponent

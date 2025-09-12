@@ -17,13 +17,13 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full bg-white backdrop-blur-sm border-b border-dark/10 z-50">
+    <nav className="fixed top-0 z-50 w-full bg-white border-b backdrop-blur-sm border-dark/10">
       {/* Container */}
-      <div className="container mx-auto flex items-center justify-between h-20 p-2 font-secondary">
+      <div className="container flex items-center justify-between h-20 p-2 mx-auto font-secondary">
         {/* Logo */}
-        <Link href="/" className="overflow-hidden h-full relative w-40">
+        <Link href="/" className="relative w-40 h-full overflow-hidden">
           <Image
-            src={"/logo-black.png"}
+            src={"/logo-black.webp"}
             alt="logo"
             fill
             className="object-contain"
@@ -31,12 +31,12 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-10 font-semibold">
+        <div className="items-center hidden gap-10 font-semibold md:flex">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="text-dark/70 hover:text-primary transition-colors duration-200 text-lg"
+              className="text-lg transition-colors duration-200 text-dark/70 hover:text-primary"
             >
               {item.label}
             </Link>
@@ -58,13 +58,13 @@ const Navbar = () => {
         </div>
         {/* Mobile Menu Overlay */}
         {isOpen && (
-          <div className="md:hidden absolute top-0 left-0 w-full h-dvh bg-white -z-10 flex flex-col gap-10 items-center justify-center">
+          <div className="absolute top-0 left-0 flex flex-col items-center justify-center w-full gap-10 bg-white md:hidden h-dvh -z-10">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 onClick={() => setIsOpen(false)} // Cierra el menú al hacer clic
-                className="text-dark/80 font-semibold text-3xl"
+                className="text-3xl font-semibold text-dark/80"
               >
                 {item.label}
               </Link>

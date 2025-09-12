@@ -19,7 +19,7 @@ export default function Home() {
       <PackagesSection />
       <BannerSection />
       <LocationSection />
-      <WhatsAppButton phone={"+543858480489"} />
+      <WhatsAppButton phone={"+543853108923"} />
     </main>
   );
 }
